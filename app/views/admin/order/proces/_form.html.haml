@@ -1,0 +1,5 @@
+.row
+  .col-md-6
+    =select_block :delivery_code, :delivery_codes, ng_required: true
+  .col-md-6
+    =state_block :approved_for_safe, init_value: :false

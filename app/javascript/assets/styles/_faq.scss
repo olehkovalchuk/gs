@@ -1,0 +1,133 @@
+.faq-page {
+  .tab-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    &--item {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      padding: 0 10px;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all .3s ease;
+      &:hover,
+      &.active {
+        color: $primary;
+        background: $btn_pink;
+        .tab-menu--icon {
+          svg {
+            fill: $primary;
+          }
+        }
+      }
+    }
+    &--icon {
+      position: relative;
+      top: -1px;
+      display: flex;
+      justify-content: center;
+      width: 27px;
+      margin-right: 10px;
+    }
+    .icon-bag {
+      svg {
+        width: 19px;
+        height: 19px;
+      }
+    }
+    .icon-gs-logo {
+      svg {
+        width: 27px;
+        height: 18px;
+      }
+    }
+    .icon-user {
+      svg {
+        width: 15px;
+        height: 20px;
+      }
+    }
+    @media (max-width: 991.98px) {
+      flex-direction: row;
+      justify-content: space-between;
+      &--item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+      &--item {
+        flex: none;
+        justify-content: flex-start;
+      }
+    }
+  }
+  .tab-content {
+    padding: 20px 30px;
+    &--item {
+      margin-top: 35px;
+    }
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 25px;
+      padding: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 500;
+      color: $primary;
+      border-bottom: 2px solid $bg_grey;
+      &:first-child {
+        margin: 0;
+      }
+      .arrow-icon {
+        &:before,
+        &:after {
+          background: $primary;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+      &.collapsed {
+        color: $black;
+        .arrow-icon {
+          &:before,
+          &:after {
+            background: $black;
+          }
+          &:before {
+            transform: rotate(-45deg);
+          }
+          &:after {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    &--text {
+      max-width: 800px;
+      margin: 30px auto 0;
+      font-size: 12px;
+      ul {
+        list-style: disc;
+        list-style-position: inside
+      }
+      a {
+        color: $primary;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

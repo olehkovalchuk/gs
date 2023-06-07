@@ -1,0 +1,149 @@
+-content_for :meta_title, 'Verification | Global Supplies' 
+-content_for :meta_description, "Verification | #{t("meta.global_static_description")}"
+.verified-status
+  %section.hero
+    .container
+      %div
+        %h1.big-title
+          Verification
+          = succeed "On Global Supplies" do
+            %br/
+        %p.hero--subtitle
+          Be trusted by our buyers and suppliers community
+          = succeed "" do
+            %br/
+      = render partial: "form", locals: {event: 'Verification', g_event: 'verification'}
+  %section.service
+    .container
+      .service--item
+        .service--icon.logistics
+          =image_tag "icon-key.svg"
+        %p Access To Verified Users
+        .info-text
+          %p Working with verified users allowing You to use our safe deal service and full customisation of Business Processes
+      .service--item
+        .service--icon.forwarding
+          =image_tag "icon-rating.svg"
+        %p
+          Priority In Offers
+          = succeed "Ranking" do
+            %br/
+        .info-text
+          %p We care that our partners should see only actual offers, especially from verified clients.
+      .service--item
+        .service--icon.secure-payment
+          =image_tag "icon-rating_2.svg"
+        %p Honesty Rating
+        .info-text
+          %p 
+            Our rating system includes not only the payment part but also the entire algorithm which allow such factors as:
+            %br
+            Your profile fulfilling
+            %br
+            Authorization and proving your company’s official status
+            %br
+            Your activity on Global Supplies
+            %br
+            Your interactions with companies.
+
+      .service--item
+        .service--icon.secure-deal
+          =image_tag "icon-google.svg"
+        %p
+          Possibility Advertise
+          %br/
+          Your Offers In Google
+        .info-text
+          %p Offers from verified companies are always promoted not only on our marketplace but also on Google
+  %section.banner
+    .container
+      .left
+        %ul
+          %li
+            %span.red >
+            Have you ever face scammers and do not want to do it again?
+          %li
+            %span.red >
+            Declared product quality doesn't respond to expectation?
+          %li
+            %span.red >
+            Claimers providing fake claims and using them in order blackmail true customers
+      .right
+        .bg-shape
+        .triangle.triangle--left
+        %ul
+          %li
+            %span.red !
+            Do not buy a pig in a poke, pass verification and work with verified users!
+          %li
+            %span.red !
+            Use rates system on our website Global Supplies before making a bargain
+          %li
+            %span.red !
+            The verified user you will get your own rating. Appreciate it.
+  %section.instructions
+    .container
+      %h2.big-title It's easy
+      .instructions-list
+        .instructions-list--item
+          %strong 1
+          %p Start your verification on this page
+        .instructions-list--item
+          %strong 2
+          %p Add info about your company
+        .instructions-list--item
+          %strong 3
+          %p We will call you back and clarify all details
+        .instructions-list--item
+          %strong 4
+          %p Pay verification free
+        .instructions-list--item
+          %strong 5
+          %p Using COFEYS services checking honesty
+        .instructions-list--item
+          %strong 6
+          %p You will require an initial rating. after a successful agreement and comments, your rating will be growing
+  %section.compare
+    .container
+      %span.switcher
+        =image_tag "switcher-arrow.svg"
+        =image_tag "switcher-arrow.svg", class: "reverse"
+      .compare-list
+        .compare-list--item
+          .compare-list--title
+            Standard b2b platform
+          .compare-list--content
+            %ul
+              %li
+                %span.red >
+                Register
+              %li
+                %span.red >
+                Pay Your monthly fee
+              %li
+                %span.red >
+                No rating and trust system
+              %li
+                %span.red >
+                No advertisement on Google
+        .compare-list--item
+          .compare-list--title.good
+            Global Supplies
+          .compare-list--content
+            %ul
+              %li
+                %span.red >
+                Register
+              %li
+                %span.red >
+                Get only target leads
+              %li
+                %span.red >
+                Reliable and Verified partners
+              %li
+                %span.red >
+                Trusted system and Google promotion
+    %section.service-form-section
+      .bg-shape.one
+      .bg-shape.two
+      = render partial: "form", locals: {event: 'Verification', g_event: 'verification'}

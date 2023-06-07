@@ -1,0 +1,73 @@
+.company-card {
+  max-width: 920px;
+  margin: auto;
+  .general-info {
+    padding: 25px 0;
+    &--wrapper {
+      display: flex;
+      padding: 0 30px;
+    }
+    .certificate-list {
+      justify-content: flex-end;
+    }
+    &--btn-block {
+      width: 100%;
+      margin-top: 20px;
+      padding: 20px 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 2px solid $bg_grey;
+      .btn {
+        display: inline-block;
+        &:last-child {
+          margin-left: 20px;
+        }
+      }
+      .claim {
+        font-weight: 500;
+        font-size: 16px;
+        color: $dark_grey;
+      }
+    }
+  }
+  &--item {
+    margin-bottom: 20px;
+    padding: 25px 30px;
+  }
+  .company-info {
+    flex: 2;
+    &--logo {
+      flex-shrink: 0;
+      margin-right: 30px;
+    }
+    &--text {
+      margin-top: 40px;
+    }
+    .company-status {
+      margin: 15px 0;
+    }
+  }
+  .offer-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 0 -15px;
+    &--item {
+      width: 50%;
+    }
+  }
+  .company-name--link {
+    color: $black;
+    transition: all .3s ease;
+    &:hover {
+      color: $primary;
+      text-decoration: underline;
+    }
+    &__not-logged {
+      color: $primary;
+      &:hover {
+        text-shadow: 2px 2px 3px #999;
+      }
+    }
+  }
+}

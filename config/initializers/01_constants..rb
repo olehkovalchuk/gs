@@ -1,0 +1,2 @@
+AVAILABLE_MARKETPLACES = %w[meat]
+DEFAULT_MARKET = 'meat'

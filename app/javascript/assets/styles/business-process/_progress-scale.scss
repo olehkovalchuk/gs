@@ -1,0 +1,169 @@
+.progress-scale-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-top: 60px;
+  &.logistics {
+    .progress-scale {
+      max-width: none;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .purchase-order__desktop {
+      flex: 2;
+    }
+  }
+  @media (max-width: 767.98px) {
+    height: 190px;
+    margin-top: 0;
+    box-shadow: inset 0px 4px 25px rgba(0, 0, 0, 0.08);
+    .progress-scale {
+      flex-direction: column;
+      height: 100%;
+      max-width: none;
+      padding: 20px 0;
+      &--item {
+        padding-bottom: 0;
+        border-bottom: none;
+        border-left: 1px dashed $corp_grey;
+        &:before {
+          top: -5px;
+          left: -5.5px;
+        }
+        &.passed-step {
+          border-left: 2px solid $black;
+          border-bottom: none;
+          &:before {
+            left: -6px;
+          }
+        }
+        &:last-child {
+          border-left-color: transparent;
+          flex: 0;
+        }
+        .btn {
+          left: -15px;
+          bottom: 0;
+        }
+      }
+      &--text {
+        height: auto;
+        margin-top: -9px;
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.progress-scale {
+  display: flex;
+  flex: 1;
+  max-width: 290px;
+  margin-left: 40px;
+  &--text {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 35px;
+  }
+  &--item {
+    position: relative;
+    flex: 1;
+    padding-bottom: 15px;
+    font-size: 12px;
+    color: $dark_grey;
+    border-bottom: 1px dashed $corp_grey;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5.5px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background: #c4c4c4;
+      border-radius: 50%;
+    }
+    .info-block {
+      display: none;
+      position: absolute;
+      top: 140%;
+      right: 35%;
+      width: 222px;
+      padding: 10px 15px;
+      font-size: 10px;
+      color: $primary;
+      background: $btn_pink;
+      border-radius: 5px;
+      box-shadow: 0px 4px 15px rgba(79, 85, 103, 0.1);
+      .close_btn {
+        &:before {
+          content: "✕";
+          color: $dark_grey;
+          position: absolute;
+          top: 3px;
+          right: 7px;
+          cursor: pointer;
+        }
+      }
+    }
+    .btn {
+      display: none;
+      position: absolute;
+      left: -10px;
+      bottom: -15px;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 50%;
+      animation: circleScale 1.2s infinite;
+      .icon-check {
+        svg {
+          width: 13px;
+          height: 10px;
+          fill: $white;
+        }
+      }
+      .icon-plus {
+        svg {
+          fill: $white;
+          width: 13px;
+          height: 13px;
+        }
+      }
+    }
+    &.current-step {
+      color: $primary;
+      .date {color: $black;}
+      &:before {background: $primary}
+      .btn {
+        display: block;
+      }
+      .info-block {display: block;}
+    }
+    &.passed-step {
+      color: $black;
+      border-bottom: 2px solid $black;
+      .date {color: $dark_grey;}
+      &:before {
+        bottom: -6px;
+        background: $black;
+      }
+    }
+    &.negotiations {
+      &.passed-step {
+        color: $primary;
+        border-color: $primary;
+        .date {color: $primary;}
+        &:before {background: $primary}
+      }
+    }
+    &.po-signed {
+      &.current-step {
+        color: $dark_grey;
+      }
+    }
+  }
+  p {margin: 0;}
+}

@@ -1,0 +1,179 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{:content => "telephone=no", :name => "format-detection"}/
+    %meta{:content => "ie=edge", "http-equiv" => "X-UA-Compatible"}/
+
+    -# = preload_link_tag 'i18n'
+    = preload_link_tag(asset_pack_path("landing.js"))
+    -# = preload_link_tag 'bootstrap'
+    -# = preload_link_tag (@style || 'application')
+
+    - unless is_lighthouse
+      = stylesheet_link_tag 'bootstrap', media: 'all'
+      = stylesheet_link_tag (@style || 'application'), media: 'all'
+    = csrf_meta_tags
+    = Gon::Base.render_data
+    
+    %title=meta_title
+    %meta{:content => meta_description, :name => "description"}/
+    / Facebook Open Graph data
+    %meta{:content => meta_title, :property => "og:title"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => request.original_url, :property => "og:url"}/
+    %meta{:content => meta_image, :property => "og:image"}/
+    %meta{:content => meta_description, :property => "og:description"}/
+    %meta{:content => meta_title, :property => "og:site_name"}/
+    %meta{:content => meta_fb_locale, :property => "og:locale"}/
+    - meta_fb_locales.each do |l|
+      %meta{:content => l, :property => "og:locale:alternate"}/
+    %meta{:content => Rails.application.secrets[:facebook][:key], :name => "fb:app_id"}/
+    / Twitter Card data
+    %meta{:content => "summary_large_image", :name => "twitter:card"}/
+    %meta{:content => "@#{Rails.application.secrets[:twitter]}", :name => "twitter:site"}/
+    %meta{:content => meta_title, :name => "twitter:title"}/
+    %meta{:content => meta_description, :name => "twitter:description"}/
+    %meta{:content => "@#{Rails.application.secrets[:twitter]}", :name => "twitter:creator"}/
+    %meta{:content => meta_image, :name => "twitter:image:src"}/
+    / Search console
+    %meta{:content => "AkLEzizvTKMrUpFnhvKJ5dUMfOHfcjgsBxMXauTqBXg", :name => "google-site-verification"}/
+    %link{:href => "/favicon.ico", :rel => "apple-touch-icon", :sizes => "180x180"}/
+    %link{:href => "/favicon.ico", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %link{:href => "/favicon.ico", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %link{:color => "#5bbad5", :href => "/safari-pinned-tab.svg", :rel => "mask-icon"}/
+    %meta{:content => "#da532c", :name => "msapplication-TileColor"}/
+    %meta{:content => "#ffffff", :name => "theme-color"}/
+    - unless is_lighthouse
+      / Cookie bot
+      -# %script#Cookiebot{"data-blockingmode" => "auto", "data-cbid" => "2d4525bb-0968-403b-954a-98d76fb9ea28", :src => "https://consent.cookiebot.com/uc.js", :type => "text/javascript"}
+      / Start of HubSpot Embed Code
+      %script#hs-script-loader{:async => "", :defer => "defer", :src => "//js.hs-scripts.com/6671711.js"}
+      / End of HubSpot Embed Code<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2f0c64d332f18eea892b395f9/8fd8545e68d5393478351ccba.js");</script>
+      /Mailchimp general code  to enable pop-up forms and Google remarketing ads.
+      
+      / Hotjar
+      :javascript
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1940300,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      / End Facebook Pixel Code
+      / Google Tag Manager
+      :javascript
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W4PPCSJ');
+      / End Google Tag Manager
+      %script#mcjs
+        \!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2f0c64d332f18eea892b395f9/8fd8545e68d5393478351ccba.js");
+
+      / Facebook Pixel Code
+      :javascript
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '742711365932762');
+        fbq('init', '189782348452598');
+        fbq('track', 'PageView');
+    - if flash[:event_data]
+      :javascript
+        fbq('track', '#{flash[:event]}', #{flash[:event_data].to_json} );
+    - elsif flash[:event]
+      :javascript
+        fbq('track', '#{flash[:event]}');
+
+    - if flash[:g_event]
+      :javascript
+        dataLayer.push ({ 'event': '#{flash[:g_event]}' })
+
+    :javascript
+      document.oncopy = function () { 
+        var bodyElement = document.body; 
+        var selection = getSelection(); 
+        var href = document.location.href; 
+        var copyright = "<br><br>See more at: <a href='"+ href +"'>" + href + "</a><br>© Global Supplies "; 
+        var text = selection + copyright; 
+        var divElement = document.createElement('div'); 
+        divElement.style.position = 'absolute'; 
+        divElement.style.left = '-99999px'; 
+        divElement.innerHTML = text; 
+        bodyElement.appendChild(divElement); 
+        selection.selectAllChildren(divElement); 
+        setTimeout(function() { 
+          bodyElement.removeChild(divElement);
+        }, 0);
+      };
+
+  %body
+    :javascript
+      window.token = '#{flash[:reset_token].to_s}'
+      window.showRestore = '#{flash[:show_restore].presence}'
+      window.showChangePwd = '#{flash[:show_change_pwd].presence}'
+      window.RestoreAction = '#{flash[:restore_action].to_s}'
+      window.landing = true
+    %app-header{id: "app-header"}
+    =yield
+    %app-footer{id: "app-footer"}
+    :javascript
+      document.addEventListener('DOMContentLoaded', function(){
+        if(typeof(AOS)!='undefined' && AOS){
+          AOS.init();
+        }
+        
+      });
+
+      function clickLogin(ev){
+        if(!window.authApp.user.user_name){
+          ev.preventDefault();
+          fbq('track', 'GetStarted'); 
+          dataLayer.push({'event': 'get_started' })
+          window.authApp.showLogin()
+        }
+      };
+
+      function socialTrack(fbEvent, googleEvent, data){
+        data = data || {}
+        fbq('track', fbEvent, data); 
+        if(googleEvent){
+          dataLayer.push({'event': googleEvent })
+        }
+        
+      };
+
+      function showDiscount() {
+        window.authApp.showPopup("discount-popup")
+      };
+      function showSpecialPrice(ev) {
+        if(!window.authApp.user.user_name){
+          ev.preventDefault();
+          fbq('track', 'GetStarted'); 
+          dataLayer.push({'event': 'get_started' })
+          window.authApp.showLogin()
+        }
+        else {
+          window.authApp.showPopup("special-price-popup")
+        }
+      };
+    - if "policy" == params[:seo_name]
+      / Cookie bot
+      %script#CookieDeclaration{:async => "", :src => "https://consent.cookiebot.com/2d4525bb-0968-403b-954a-98d76fb9ea28/cd.js", :type => "text/javascript"}
+    / Chat bot
+    - unless is_lighthouse
+      %script{:async => "", :defer => "defer", :src => "https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit"}
+    = javascript_include_tag 'i18n'
+    = javascript_include_tag 'translations.js?v2323232', skip_pipeline: true
+    = javascript_pack_tag 'landing'
+    = stylesheet_pack_tag (@style || 'application')

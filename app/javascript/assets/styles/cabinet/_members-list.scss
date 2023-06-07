@@ -1,0 +1,94 @@
+.members-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  &--title {
+    color: $dark_grey;
+    font-size: 14px;
+  }
+  &--item {
+    position: relative;
+    display: flex;
+    width: 33%;
+    padding: 16px 0 16px 25px;
+    color: $black;
+    .member-image {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    .member-info {
+      margin-left: 10px;
+      line-height: 1.3;
+      p {
+        margin: 0 10px 0 0;
+      }
+    }
+    .member-position {
+      font-size: 12px;
+    }
+    &:hover {
+      color: $black;
+    }
+  }
+  &--btn-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    .add-member {
+      display: flex;
+      align-items: center;
+      color: $primary;
+      &--icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        background: $btn_pink;
+        border-radius: 50%;
+        &:before,
+        &:after {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 18px;
+          background: $primary;
+        }
+        &:after {
+          margin-left: -2px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .read-more-link {
+      font-size: 12px;
+      .arrow-icon {
+        top: 2px;
+        width: 12px;
+        &:before,
+        &:after {
+          height: 8px;
+        }
+      }
+    }
+  }
+  .context-menu {
+    right: -10px;
+  }
+  @media (max-width: 767.98px) {
+    &--item {
+      width: 50%;
+    }
+  }
+  @media (max-width: 575.98px) {
+    &--item {
+      width: 100%;
+    }
+  }
+}

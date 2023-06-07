@@ -1,0 +1,244 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "ie=edge", "http-equiv" => "X-UA-Compatible"}/
+    %title
+    :css
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial;
+        font-size: 16px;
+        background: #000;
+      }
+      .page {
+        width: 960px;
+        margin: 0 auto;
+        padding: 60px;
+        box-sizing: border-box;
+        background: #fff;
+      }
+      h1 {
+        padding-bottom: 10px;
+        font-family: "Times New Roman", Times, serif;
+        color: #17397f;
+        font-size: 32px;
+        font-weight: 500;
+        border-bottom: 2px solid #4f81bd;
+      }
+      table {
+        width: 100%;
+      }
+      th {
+        height: 60px;
+        text-align: left;
+      }
+      td {
+        height: 30px;
+      }
+      td:first-child {
+        width: 35%;
+      }
+      .sign-block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+      .sign {
+        display: flex;
+        justify-content: space-between;
+      }
+      .sign:first-child {
+        margin-bottom: 50px;
+      }
+      .line {
+        width: 200px;
+        border-bottom: 1px solid #000;
+      }
+  %body
+    .page
+      %h1
+        Global Supplies
+        = succeed "Meat Treding Marketplace" do
+          %br/
+        = succeed "Automatic purchase order" do
+          %br/
+      %table
+        %tr
+          %th{:colspan => "2"}
+            %strong 1. Company seller
+        %tr
+          %td 1.1 Company name
+          %td=item.seller_company_deails["title"]
+        %tr
+          %td 1.2 Company address
+          %td=item.seller_company_deails["address"]
+        - if item.seller_company_deails["zip_address"].presence
+          %tr
+            %td 1.3 Postal address
+            %td=item.seller_company_deails["zip_address"]
+        %tr
+          %td 1.4 Account number
+          %td=item.seller_company_deails["account_number"]
+        %tr
+          %td 1.5 Phone
+          %td=item.seller_company_deails["phone"]
+        %tr
+          %th{:colspan => "2"}
+            %strong 2. Contact Seller person info
+        %tr
+          %td 2.1 Full name
+          %td="#{item.seller_main_contact_person["first_name"]} #{item.seller_main_contact_person["last_name"]}"
+        %tr
+          %td 2.2 Phone number
+          %td=item.seller_main_contact_person["phone"]
+        %tr
+          %td 2.3 E-mail
+          %td=item.seller_main_contact_person["email"]
+        - if item.seller_main_contact_person["title"].presence
+          %tr
+            %td 2.4 Position
+            %td=item.seller_main_contact_person["title"]
+        - if item.seller_additional_contact_person["first_name"].presence
+          %tr
+            %th{:colspan => "2"}
+              %strong 2a. Additional contact person
+          %tr
+            %td 2.1a.
+            %td=item.seller_additional_contact_person["first_name"]
+          %tr
+            %td 2.2a. Phone number
+            %td=item.seller_additional_contact_person["phone"]
+          %tr
+            %td 2.3a.
+            %td=item.seller_additional_contact_person["email"]
+          %tr
+            %td 2.4a.
+            %td=item.seller_additional_contact_person["title"]
+        %tr
+          %th{:colspan => "2"}
+            %strong 3. Company Buyer
+        %tr
+          %td 3.1 Company name
+          %td=item.buyer_company_deails["title"]
+        %tr
+          %td 3.2 Company address
+          %td=item.buyer_company_deails["address"]
+        - if item.buyer_company_deails["zip_address"].presence
+          %tr
+            %td 3.3 Postal address
+            %td=item.buyer_company_deails["zip_address"]
+        %tr
+          %td 3.4 Account number
+          %td=item.buyer_company_deails["account_number"]
+        %tr
+          %td 3.4 Phone
+          %td=item.buyer_company_deails["phone"]
+
+        %tr
+          %th{:colspan => "2"}
+            %strong 4. Contact Buyer person info
+        %tr
+          %td 4.1 Full name
+          %td="#{item.buyer_main_contact_person["first_name"]} #{item.buyer_main_contact_person["last_name"]}"
+        %tr
+          %td 4.2 Phone number
+          %td=item.buyer_main_contact_person["phone"]
+        %tr
+          %td 4.3 E-mail
+          %td=item.buyer_main_contact_person["email"]
+        - if item.buyer_main_contact_person["title"].presence
+          %tr
+            %td 4.4 Position
+            %td=item.buyer_main_contact_person["title"]
+        - if item.buyer_additional_contact_person["first_name"].presence
+          %tr
+            %th{:colspan => "2"}
+              %strong 4a. Additional contact person
+          %tr
+            %td 4.1a.
+            %td=item.buyer_additional_contact_person["first_name"]
+          %tr
+            %td 4.2a. Phone number
+            %td=item.buyer_additional_contact_person["phone"]
+          %tr
+            %td 4.3a.
+            %td=item.buyer_additional_contact_person["email"]
+          %tr
+            %td 4.4a.
+            %td=item.buyer_additional_contact_person["title"]
+        %tr
+          %th{:colspan => "2"}
+            %strong 5. Name of the goods
+        %tr
+          %td 5.1 Name of the goods
+          %td=item.title
+        %tr
+          %td 5.2 Name of the goods for BL
+          %td=item.title
+        -# %tr
+        -#   %td 5.3 Product specification
+        -#   %td=item.deliver_packaging_title
+        %tr
+          %td 5.3 Packing type
+          %td=item.deliver_packaging_title
+        %tr
+          %td 5.4 Month of production
+          %td=item.month_of_production
+        %tr
+          %td 5.5 Quantity
+          %td="#{item.quantity}"
+        %tr
+          %td 5.6 Price
+          %td="#{item.price} #{item.currency}"
+        %tr
+          %td 5.7 Producer/Country of origin
+          %td=item.origin_country_title
+        %tr
+          %th{:colspan => "2"}
+            %strong 6. Payment terms
+        - if item.payment_type.has_prepay
+          %tr
+            %td 6.1 Pre payment
+            %td="#{item.pre_pay}%"
+          %tr
+            %td 6.2 Post payment
+            %td="#{item.post_pay}%"
+        - else
+          %tr
+            %td 6.1 Type
+            %td=item.payment_type_title
+        %tr
+          %td 7. Delivery terms
+          %td=item.delivery_code
+        - if item.port
+          %tr
+            %td 8. Port and country of destination
+            %td=item.port_title
+        - if item.sea_line
+          %tr
+            %td 9. Shipping lines
+            %td=item.sea_line_title
+        - if item.documents.any?
+          %tr
+            %td 10. List of required documents
+            %td=item.presenter.documents
+      .sign-block
+        %div
+          .sign
+            %p Date:
+            .line
+          .sign
+            %p Seller:
+            .line
+        %div
+          .sign
+            %p Date:
+            .line
+          .sign
+            %p Buyer:
+            .line

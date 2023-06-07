@@ -1,0 +1,39 @@
+.error-page {
+  padding: 70px 0;
+  text-align: center;
+  background: $bg_grey;
+  h1 {
+    font-size: 260px;
+    background: $btn_gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    font-size: 18px;
+  }
+  .btn-block {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 425px;
+    margin: 30px auto 0;
+    .btn {
+      flex: 1;
+      max-width: 49%;
+    }
+  }
+  @media (max-width: 575.98px) {
+    h1 {
+      font-size: 160px;
+    }
+    .btn-block {
+      flex-direction: column;
+      .btn {
+        max-width: 100%;
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+-content_for :meta_title, "#{@post.title} | Global Supplies"
+-content_for :meta_description, "#{@post.title} | Global Supplies | The most convenient and dynamically developing b2b platform working worldwide | Join us to find wholesale suppliers or to trade your products on a business to business wholesale"
+-content_for :meta_image, (@post.image.try(:service_url) || image_path("article-img.png"))
+.blog-page
+  .container.article-container
+    .blog-article
+      -# %img{alt: @post.title, src: @post.image.attached? ? @post.image.variant(resize_to_limit: [1370, 250]).processed.service_url : image_path("article-img.png")}/
+      .article--text
+        %span.date=@post.created_at.strftime("%d %b %Y")
+        %h1.article--title=@post.title
+        %p
+          %strong=@post.anons
+        %p=@post.text.html_safe
+    =render "mailing"

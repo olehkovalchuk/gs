@@ -1,0 +1,99 @@
+.pagination-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  .go-to-page {
+    display: flex;
+    align-items: center;
+    .input-block {
+      display: flex;
+      width: 90px;
+      margin-left: 10px;
+      .txtinput {
+        height: 30px;
+        padding: 0;
+        text-align: center;
+        border-right: none;
+        border-radius: 5px 0 0 5px;
+      }
+      .btn {
+        flex: 1;
+        height: 30px;
+        padding: 0 6px;
+        font-size: 16px;
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
+
+  .pagination {
+    &-link {
+      color: $black;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      outline: none;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      border: none;
+      background: none;
+      border-radius: 5px;
+      &--active {
+        color: $white;
+        background: $btn_gradient;
+      }
+    }
+    &-item {
+      &:first-child,
+      &:last-child {
+        font-size: 0;
+        .pagination-link {
+          flex-direction: column;
+          border: 1px solid $black;
+          border-radius: 5px;
+          &:before,
+          &:after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 1px;
+            background: $black;
+            border-radius: 10px;
+          }
+          &:before {
+            transform: rotate(40deg);
+          }
+          &:after {
+            margin-top: -7px;
+            transform: rotate(-40deg);
+          }
+        }
+        &:last-child {
+          .pagination-link {
+            &:before {
+              transform: rotate(-40deg);
+            }
+            &:after {
+              transform: rotate(40deg);
+            }
+          }
+        }
+      }
+      &:first-child {
+        margin-right: 10px;
+      }
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    .go-to-page {
+      margin-top: 20px;
+    }
+  }
+}

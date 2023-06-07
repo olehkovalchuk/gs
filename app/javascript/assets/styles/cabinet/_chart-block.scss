@@ -1,0 +1,11 @@
+.chart-block {
+  margin-top: 35px;
+  &--title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &--item:first-child {
+    border-right: 1px solid $bg_grey;
+  }
+}

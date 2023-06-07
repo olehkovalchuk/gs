@@ -1,0 +1,9 @@
+.row
+  .col-md-6
+    = string_block :code, ng_required: true
+  .col-md-6
+    = select_block :region_code, :regions, ng_required: true
+.row
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :title , locale, ng_required: true

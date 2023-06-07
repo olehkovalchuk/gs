@@ -1,0 +1,131 @@
+.footer {
+  position: relative;
+  margin-top: 100px;
+  font-size: 16px;
+  color: $black;
+  background: $white;
+  a {color: $black;}
+  &--container {
+    position: relative;
+    background: url("~assets/img/footer_bg.svg") no-repeat 0 30%;
+  }
+  .mobile-external-links {
+    display: none;
+    @media (max-width: 575.98px) {
+      display: block;
+      .external-links {
+        max-width: none;
+        margin: 0;
+        padding: 15px 0;
+      }
+    }
+  }
+  .nav-menu {
+    margin-top: 45px;
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    @media (max-width: 575.98px) {
+      margin-top: 0;
+    }
+  }
+  .external-links {
+    max-width: 160px;
+  }
+  .contacts {
+    max-width: 230px;
+    margin-top: 45px;
+    &--item {
+      margin-bottom: 15px;
+      padding-left: 35px;
+      background-repeat: no-repeat;
+      background-position: 0 4px;
+      &:last-child {margin: 0;}
+      &.address {background-image: url("~assets/img/icon-pin.svg")}
+      &.phone {
+        > * {display: block;}
+        background-image: url("~assets/img/icon-phone.svg")
+      }
+      &.mail {background-image: url("~assets/img/icon-mail.svg")}
+      &.skype {background-image: url("~assets/img/icon-skype.svg")}
+      &.wechat {background-image: url("~assets/img/icon-wechat.svg")}
+      &.whatsapp {background-image: url("~assets/img/icon-whatsapp.svg")}
+      &.viber {background-image: url("~assets/img/icon-viber.svg")}
+      &.telegram {background-image: url("~assets/img/icon-telegram.svg")}
+    }
+    @media (max-width: 575.98px) {
+      max-width: none;
+      margin: 30px 0;
+      padding: 20px 0;
+      border-top: 1px solid $corp_grey;
+      border-bottom: 1px solid $corp_grey;
+    }
+  }
+  &--contact-form {
+    h2 {
+      margin-bottom: 25px;
+    }
+    textarea {
+      display: block;
+      resize: none;
+      height: 110px;
+    }
+    .flex-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &--btn-block {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 55px;
+      .btn {
+        padding-left: 37px;
+        padding-right: 37px;
+      }
+    }
+    @media (max-width: 991.98px) {
+      margin-top: 50px;
+      &--btn-block {
+        margin-top: 25px;
+      }
+    }
+    @media (max-width: 575.98px) {
+      margin-top: 0;
+      .txtinput {
+        margin-bottom: 25px;
+      }
+      &--btn-block {
+        justify-content: center;
+      }
+    }
+  }
+  &--top {
+    padding: 35px 0 50px;
+    @media (max-width: 575.98px) {
+      padding: 35px 0;
+      .external-links {
+        display: none;
+      }
+    }
+  }
+
+  &--bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $corp_grey;
+    padding: 12px 0;
+    p {margin: 0;}
+    a {
+      text-decoration: underline;
+      &:hover {text-decoration: none;}
+    }
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+      font-size: 14px;
+    }
+  }
+}

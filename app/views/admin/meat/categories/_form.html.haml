@@ -1,0 +1,18 @@
+.row
+  .col-md-12
+    =image_block :image
+.row
+  .col-md-3
+    = select_block :market, :markets, ng_required: true
+  .col-md-3
+    = select_block :parent_id, :categories, ng_required: true
+  .col-md-2
+    = state_block :active, initial_value: :false
+  .col-md-2
+    = string_block :icon
+  .col-md-2
+    = string_block :cls
+.row
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :title , locale, ng_required: true

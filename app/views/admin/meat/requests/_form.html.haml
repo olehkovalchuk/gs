@@ -1,0 +1,38 @@
+.row
+  .col-md-12
+    = select_block :market, :markets, ng_required: true
+.row
+  .col-md-6
+    = state_block :active, initial_value: 'false'
+  .col-md-6
+    =select_block :category_id, :categories, ng_required: true
+.row
+  .col-md-3
+    =integer_block :quantity, ng_required: false
+  .col-md-3
+    =integer_block :price_from, ng_required: false
+  .col-md-3
+    =integer_block :price_to, ng_required: false
+  .col-md-3
+    =select_block :currency, :currencies, ng_required: true
+
+.row
+  .col-md-6
+    =tags_block :certificates,  {ng_required: false}, true
+  .col-md-6
+    =tags_block :delivery_conditions,  {ng_required: true}, true
+.row
+  .col-md-6
+    =tags_block :documents,  {ng_required: false}, true
+  .col-md-6
+    =tags_block :payment_types,  {ng_required: true}, true
+.row
+  .col-md-6
+    =tags_block :permissions_to,  {ng_required: false}, true
+  .col-md-6
+    =tags_block :origins,  {ng_required: true}, true
+
+
+.row
+  .col-md-12
+    =text_block :description

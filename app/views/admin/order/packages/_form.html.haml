@@ -1,0 +1,79 @@
+.row
+  .col-md-12
+    .form-group
+      %label{:for => "file"} PDF
+      %a{style:"font-size: 30px;", href: "{{editedItem.file_link}}", target: :_blank, ng_if: "editedItem.file_link"} {{editedItem.file_name}}
+
+      .text-center
+        %input#file{:name => "file", :ng_disabled => "isDisabled", :ng_file_select => "onFileSelect($files)", :ng_model => "editedItem.file", :ng_show => "!isDisabled", :style => "display: block;", :type => "file"}/
+
+
+
+.row
+  .col-md-2
+    = state_block :active, initial_value: :false
+  .col-md-2
+    = state_block :default, initial_value: :false
+  .col-md-2
+    = state_block :is_best, initial_value: :false
+  .col-md-3
+    = state_block :map_access, initial_value: :false
+  .col-md-3
+    = select_block :rating_code, :usage_types, ng_required: true
+
+.row
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :title , locale, ng_required: true
+
+.row
+  .col-md-4
+    = integer_block :days, ng_required: true, ng_minlength: 1
+  .col-md-4
+    = integer_block :price, ng_required: true, ng_minlength: 1
+  .col-md-4
+    = select_block :currency, :currencies
+.row
+  .col-md-12
+    = string_block :description
+
+.row
+  .col-md-3
+    = integer_block :offers_count, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :requests_count, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :received_inquries, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :replyies_to_inquries, ng_required: true, ng_minlength: 1
+.row
+  .col-md-3
+    = integer_block :active_chats, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :show_infos, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :buyer_allerts, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :sub_accounts, ng_required: true, ng_minlength: 1
+.row
+  .col-md-3
+    = integer_block :sended_inquries, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :top_offers, ng_required: true, ng_minlength: 1
+
+.row
+  .col-md-6
+    = string_block :performance, ng_required: false
+  .col-md-6
+    = string_block :reports, ng_required: false
+- Order::ServiceCategory.includes(:service_items).all.each do |category|
+  %h2=category.title
+  - category.service_items.each do |item|
+    %h5=item.title
+    .row
+      .col-md-4
+        = state_block :closed, initial_value: :false, ng_model: "editedItem.offline_packages[#{category.id}][#{item.id}]['closed']", id: "closed_#{item.id}"
+      .col-md-4
+        = state_block :as_checked, initial_value: :false, ng_model: "editedItem.offline_packages[#{category.id}][#{item.id}]['as_checked']", id: "as_checked_#{item.id}"
+      .col-md-4
+        = string_block :description, ng_model: "editedItem.offline_packages[#{category.id}][#{item.id}]['description']", id: "description_#{item.id}"

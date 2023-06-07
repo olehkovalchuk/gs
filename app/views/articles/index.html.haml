@@ -1,0 +1,17 @@
+-content_for :meta_title, 'News | Global Supplies' 
+-content_for :meta_description, "News | #{t("meta.global_static_description")}"
+.blog-page
+  .container
+    %h1.blog-page--title=t("common.blog")
+    .article-list
+      .row
+        - @posts.each do |article|
+          .col-lg-4.col-md-6.col-12
+            %a.article{href: article_path(id: article.seo_name)}
+              .article--img
+                %img{alt: article.title, src: article.image.attached? ? article.image.try(:service_url) : image_path("article-img.png")}/
+              .article--text
+                %span.date=article.created_at.strftime("%d %b %Y")
+                %h3.article--title=article.title
+                %p=article.anons
+    =render "mailing"

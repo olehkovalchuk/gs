@@ -1,0 +1,17 @@
+.row
+  .col-md-2
+    = state_block :has_own_text, initial_value: :false
+  .col-md-2
+    = select_block :marketplace_type, :marketplace_types , ng_required: true
+  .col-md-2
+    = select_block :page_type, :page_types , ng_required: true
+  .col-md-3
+    = select_block :category_seo, :categories, ng_required: "'category' == editedItem.page_type || 'country_category' == editedItem.page_type"
+  .col-md-3
+    = select_block :country_code, :countries, ng_required: "'country' == editedItem.page_type || 'country_category' == editedItem.page_type"
+.row{ng_if:"editedItem.has_own_text"}
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :meta_title , locale
+      = input_for_lang_tabs :string, :meta_description , locale
+      = rich_text_editor :text, locale, required: true, id: "text_#{locale}"

@@ -1,0 +1,45 @@
+#itemsTable{
+  text-align: center;
+}
+#itemsTable td {
+  vertical-align: middle;
+}
+.ng-binding.ng-scope a{
+  color: #000;
+}
+.label-approved, .label-payed, .label-failed, .label-cancelled, .label-completed, .label-created, .label-rejected{
+  margin-right: 0!important;
+  width: 100%;
+  display: block!important;
+  padding: 5px 0!important;
+  font-weight: 900;
+  font-size: 10px;
+}
+
+.label-failed{
+  background-color: red
+}
+.label-approved{
+  background-color: green
+}
+.label-cancelled{
+  background-color: red
+}
+.label-payed{
+  background-color: green
+}
+.label-completed{
+  background-color: violet
+}
+
+.label-sent{
+  background-color: green
+}
+
+.label-edited{
+  background-color: violet
+}
+
+.label-unpayed{
+  background-color: red
+}

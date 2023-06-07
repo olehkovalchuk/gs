@@ -1,0 +1,121 @@
+{
+  "name": "global_supplies",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "prod": "webpack --config config/webpack/production.js  --progress --hide-modules"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-destructuring": "^7.5.0",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@inotom/vue-go-top": "^1.1.0",
+    "@rails/actioncable": "^6.0.0-alpha",
+    "@rails/activestorage": "^6.0.0-alpha",
+    "@rails/ujs": "^6.0.0-alpha",
+    "@rails/webpacker": "^4.0.7",
+    "@riophae/vue-treeselect": "^0.3.0",
+    "actioncable-vue": "^1.3.0",
+    "autoprefixer": "^9.6.1",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.6.1",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.1",
+    "chart.js": "^2.8.0",
+    "chartjs-plugin-datalabels": "^0.6.0",
+    "css-loader": "^2.1.1",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "html2canvas": "^1.0.0-rc.3",
+    "jspdf": "^1.5.3",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "swiper": "^4.5.0",
+    "v-blur": "^1.0.3",
+    "v-tooltip": "^2.0.2",
+    "vee-validate": "^2.2.14",
+    "vue": "^2.6.10",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-backtotop": "^1.6.1",
+    "vue-chartjs": "^3.4.2",
+    "vue-clickaway": "^2.2.2",
+    "vue-disable-autocomplete": "0.0.4",
+    "vue-loader": "^15.7.0",
+    "vue-loading-overlay": "^3.2.0",
+    "vue-meta": "^2.4.0",
+    "vue-moment": "^4.0.0",
+    "vue-phone-number-input": "^0.2.0",
+    "vue-plain-pagination": "^0.3.0",
+    "vue-recaptcha": "^1.2.0",
+    "vue-router": "^3.0.3",
+    "vue-select": "^3.1.0",
+    "vue-slider-component": "^3.0.33",
+    "vue-spinner": "^1.0.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-tel-input": "^3.0.0",
+    "vue-template-compiler": "^2.5.21",
+    "vue-toast-notification": "^0.6.0",
+    "vue-toasted": "^1.1.27",
+    "vue-tour": "^1.1.0",
+    "vue2-datepicker": "^2.12.0",
+    "vue2-dropzone": "^3.6.0",
+    "vue2-google-maps": "^0.10.7",
+    "vuedraggable": "^2.23.2",
+    "vuex": "^3.0.1",
+    "vuex-persist": "^2.0.1",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.1"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "pug": "^2.0.4",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-pug": "^1.0.7",
+    "vue-tree-navigation": "^4.0.1",
+    "webpack-dev-server": "^3.7.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/prettier"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

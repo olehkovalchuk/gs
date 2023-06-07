@@ -1,0 +1,8 @@
+-content_for :meta_title, @post.title
+.blog-page
+  .container.article-container
+    .blog-article
+      .article--text
+        %h1.article--title=@post.title
+        %p=@post.text.html_safe
+    =render "mailing"

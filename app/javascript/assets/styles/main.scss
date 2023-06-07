@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,latin-ext');
+@import 'node_modules/bootstrap-vue/dist/bootstrap-vue';
+@import 'node_modules/vue-select/src/scss/vue-select';
+@import 'node_modules/swiper/dist/css/swiper';
+@import 'node_modules/vue-slider-component/theme/default';
+@import 'node_modules/vue-phone-number-input/dist/vue-phone-number-input';
+@import 'node_modules/vue-loading-overlay/dist/vue-loading';
+@import 'node_modules/@riophae/vue-treeselect/dist/vue-treeselect';
+@import 'node_modules/vue-toast-notification/dist/theme-sugar';
+
+@import '_colors';
+@import '_ui-elements';
+@import '_tooltip';
+@import '_popup';
+@import '_pagination';
+
+@import '_header';
+@import '_footer';
+
+@import '_aside';
+@import '_filters-bar';
+@import '_side-nav';
+@import '_deal-switcher';
+@import '_search-bar';
+@import '_sort-bar';
+@import '_product-list';
+@import '_product-card';
+@import '_info-list';
+@import '_recommendations';
+@import '_bid-block';
+@import '_bid-history';
+@import '_company-info';
+@import '_offer-list';
+@import '_context-menu';
+@import '_company-status';
+@import '_adding-form';
+
+/* Cabinet */
+@import 'cabinet/_side-nav';
+@import 'cabinet/_user-profile';
+@import 'cabinet/_company-profile';
+@import 'cabinet/_deal-buttons';
+@import 'cabinet/_chart-block';
+@import 'cabinet/_members-list';
+@import 'cabinet/_user-offers-list';
+@import 'cabinet/_edit-profile';
+@import 'cabinet/_chat';
+@import 'cabinet/_default-table';
+@import 'cabinet/_transactions-list';
+@import 'cabinet/_invoice-list';
+@import 'cabinet/_bid-list';
+@import 'cabinet/_notifications';
+
+@import '_error-page';
+
+@import '_map';
+
+@import '_faq';
+
+/* Company description page */
+@import '_company-card';
+
+/* Business process */
+@import 'business-process/_bp-list';
+@import 'business-process/_bp-item';
+@import 'business-process/_attachment';
+@import 'business-process/_notification-block';
+@import 'business-process/_progress-scale';
+@import 'business-process/_purchase-order';
+@import 'business-process/_selected-company';
+@import 'business-process/_selected-product';
+@import 'business-process/_start-deal';
+@import 'business-process/_finish-process';
+/* General */
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+html {
+
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto";
+  background: $bg_grey;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+label {margin: 0;}
+h1,h2,h3,h4,h5,h6 {margin: 0;}
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.red {color: $primary;}
+
+.mt-40{margin-top: 40px;}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.vue-treeselect__control{
+  min-height: 40px;
+}
+.vue-treeselect__control-arrow-container{
+  display: none;
+}
+.vue-treeselect__multi-value-item{
+    margin: 2.5px;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+.vue-treeselect__value-remove, .vue-treeselect__multi-value-item{
+  background: #fce7ee;
+  color: #333;
+  font-size: 14px;
+  height: 32px;
+  border: none;
+    // margin: 2.5px;
+    // padding: 0 10px;
+}
+.swiper-slide, .product-card--gallery img {
+  max-height: 430px;
+}
+
+.user-menu--avatar img{
+  width: 100%;
+}
+.offer-list--item--img img{
+  width: 100%;
+}
+
+
+[v-cloak] {
+    display: block;
+    padding: 50px 0;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+[v-cloak]:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #333;
+    animation: spinner 0.6s linear infinite;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+[v-cloak]>* {
+    display: none;
+}
+@media print {
+  .deal-switcher, .product-card--btn-block, .bid-block, .recommendations, .footer,.user-menu, .btn__icon, .btn__transparent, .search-bar, .breadcrumbs, .read-more {
+    display: none!important;
+  }
+}
+.v_line_hover_effect {
+  &.active {
+    background: #FFF0F5 !important;
+    &:after {
+      height: 100%
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background-color: $primary2;
+    transition: all .3s ease;
+  }
+}
+.vld-overlay.is-full-page{
+  z-index: 5000
+}
+
+.grecaptcha-badge{
+  display: none;
+}
+
+.v-toast__item--custom {
+  background: -webkit-gradient(linear, left top, right top, from(#CD1515), to(#E6145F));
+  background: linear-gradient(90deg, #CD1515 0%, #E6145F 100%);
+  a {
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}

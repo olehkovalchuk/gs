@@ -1,0 +1,812 @@
+en:
+  common:
+    sell_on_markets: Products what you are interested
+    blog: News | Global Supplies
+    market: Market
+    whatsapp:
+      registration:
+        Hello, %{username}. I am Global Supplies notifier, will help you to get familiar with platform on which You have just registered. We already sent the instructions to your email (Do not forget to check the spam) to verify your account and after that we can start working together. You can message me in any cases if You will need some assistance from our team
+      chat_message: You received a new message! A potential partner is writing to you, please check the chat. Go to Chat %{link}
+      inq_registration: Your inquiry was successfully sent to the partner. Register a free account and chat with them directly. Follow the %{link} to start chat
+      new_inq: Good day %{username}. You have a new inquiry to Your product %{title}.Inquiry text:"%{text}" Follow the %{link} to reply. Have a great deals!
+      new_bid: You have a new bid on the %{title} offer, just follow the %{link} and start a direct conversation with a potential partner.
+      new_send_offer: Supplier %{username} propose You offer of %{title}. Press the %{link} to see the offers
+    notifications_messages:
+      offers_count:
+        heading: <strong>Thanks for adding your Offer! </strong>
+        text:
+          many: You have %{count} free Offers left
+          one: You have 1 more free Offer left
+          zero: You have no more free Offers left
+        footer: To add more Offers, <a href="/pricing">subscribe</a>
+      requests_count:
+        heading: <strong>Thanks for adding your Request! </strong>
+        text:
+          many: You have %{count} free Requests left
+          one: You have 1 more free Request left
+          zero: You have no more free Requests left
+        footer: To add more Requests, <a href="/pricing">subscribe</a>
+      show_infos:
+        heading: <strong>Thanks for Viewing the contact information! </strong>
+        text:
+          many: You have %{count} free Views left
+          one: You have 1 more free View left
+          zero: You have no more free Views
+        footer: To add more Views, <a href="/pricing">subscribe</a>
+      active_chats:
+        heading: <strong>Thanks for using the Chat!</strong>
+        text:
+          many: You have %{count} free Chats left
+          one: You have 1 more free Chat left
+          zero: You have no more free Chats left
+        footer: To add more Chats, <a href="/pricing">subscribe</a>
+      sended_inquries:
+        heading: <strong>Thanks for sending your Inquiry!</strong>
+        text:
+          many: You have %{count} free Inquiries left
+          one: You have 1 more free Inquiry left
+          zero: You have no more free Inquiries
+        footer: To add more Inquiries, <a href="/pricing">subscribe</a>
+      buyer_allerts:
+        heading: <strong>You have add the Buyer alert! </strong>
+        text:
+          many: You have %{count} free Buyer alerts left
+          one: You have 1 more free Buyer alerts left
+          zero: You have no more free Buyer alerts
+        footer: To add more Buyer alerts, <a href="/pricing">subscribe</a>
+      sub_accounts:
+        heading: <strong>You have add the Member! </strong>
+        text:
+          many: You have %{count} free Members left
+          one: You have 1 more free Member left
+          zero: You have no more free Members
+        footer: To add more Member, <a href="/pricing">subscribe</a>
+      replyies_to_inquries:
+        heading: <strong>You have reply the Inquiry! </strong>
+        text:
+          many: You have %{count} free Inquiry replies left
+          one: You have 1 more free Inquiry reply left
+          zero: You have no more free Inquiries
+        footer: To add more Inquiries, <a href="/pricing">subscribe</a>
+      received_inquries:
+        heading: <strong>You have received the Inquiry! </strong>
+        text:
+          many: You have %{count} free Inquiries left
+          one: You have 1 more free Inquiry left
+          zero: You have no more free Inquiries
+        footer: To add more Inquiries, <a href="/pricing">subscribe</a>
+      top_offers:
+        heading: <strong>Thanks for Promoting the offer! </strong>
+        text:
+          many: You have %{count} free Promotings left
+          one: You have 1 more free Promoting left
+          zero: You have no more free Promotings
+        footer: To add more Promotings, <a href="/pricing">subscribe</a>
+    price_package: Choose package
+    create_password: Create password
+    pricing_tooltip:
+      show_infos: The ratio of the current to maximum quantity of access to company contacts on our marketplace due to your membership
+      posted_offers: The ratio of the current to maximum quantity of posted offers on our marketplace due to your membership
+      posted_requests: The ratio of the current to the maximum quantity of posted requests on our marketplace due to your membership”
+      incoming_inquiries: The ratio of how many incoming inquiries from buyers  You can get to the maximum quantity due to your membership 
+      outcoming_inquiries: The ratio of your used outcoming inquiries to maximum ones
+      chat_quantity: Maximum quantity of unique chats on our marketplace 
+      access_to_trading_map: Check visually all verified companies on interactive meat trading map
+      show_contact_info: The quantity of how many contact details You can see
+      promoted_offers: Quantity of your promoted to TOP positions offers 
+      active_buyer_alerts: If you are interested in some specific products set alert not to miss best requests from verified buyers 
+      sub_accounts_limit: The maximum numbers of members in your company account
+      reply_to_inquiries: How many replies you can do due to your membership
+      company_performance: All company performance analytics such as offers views, incoming contacts, products actuality and much more
+      industry_reports: All import and export rates, market changes forecast and current industry situation  for the meat products you are interested in
+    top_success_message: You have just promoted our offer. All buyers will see your offer on TOP positions
+    promo_type: Promotion type
+    in_top: Top Offer
+    see_all_offers: See all offers
+    replay_inquire: Inquiry reply
+    inquiry_saved: Your inquiry was successfully submitted. Check your email for the reply to your request
+    inquiry_replayed: Thank you for Your answer. Check your email for the answer
+    send_replay: Send reply
+    inquiry_replay_plc: Enter a reply
+    please_paid_inqury: Please paid subscription to read inquiry
+    place_inquire: Contact Supplier
+    send_inquire: Submit inquiry
+    inquiry_plc: Describe product specification such as weight range, quantity, packing,сertificates etc
+    join: Join
+    bronze: Bronze
+    silver: Silver
+    gold: Gold
+    get: Get
+    browse: Browse
+    get_membership: Get membership
+    general: General
+    detailed: Detailed
+    advanced: Advanced
+    unlimited: Unlimited
+    general_report: General report
+    tagret_report: Tagret report
+    enterprice_report: Enterprice report
+    contact_supplier: Contact Supplier
+    contact_buyer: Contact Buyer
+    membership_expired: You need to be a member
+    subscribe_finished: Thank you for subscription!
+    not_found: This offer/request is not actual. Search another on our marketplace
+    you_can_login_with_new_password: Your password was changed, you can login now.
+    limit_reached: Dear partner, You reached your  limit of free views on our platform. <br>Please log in to your account
+    want_to_be_get_proposals: I want to be notified about
+    subscribe_for_offers: New Offers
+    bp_finished: Congratulations! Process finished.
+    finish: Finish
+    leave_feedback: Leave feedback
+    go_to_find_new_one: Back to shopping!
+    leave_feedback: Leave feedback
+    want_to_be_in_safe: To avoid Fishing
+    start_as_safe: Use Safe Deal
+    safe_deal_title: Start safe deal today!
+    start_safe_now: Start safe!
+    start_safe_now_desc: For start safe deal please make a payment and that mark your process as Safe
+    get_best_offers_now: >
+      <b>Get the best offers</b><br/>
+      Let our manager find the best offers from verified suppliers which will meet all your needs<br/>
+      <a href="/page/get_offers">Get offers now</a>
+    no_results: We haven't found any matches for your request
+    no_results_desc: Be the first one who posted such offer or just request it
+    to_use_need_login: Please login to continue use the platform
+    be_the_first_one: Be the first one
+    request_a_product: Request product
+    no_offer_title: There is no posted offer yet.
+    no_offer_desc: On this page, you will see all your offers on the platform as soon as you will add them. Let’s add your first offer
+    no_offer_btn: Add my first offer
+    no_request_title: There is no posted request yet
+    no_request_desc: On this page, you will see all your requests on the platform as soon as you will add them. Let’s add your first request
+    no_request_btn: Add my first request
+    contrats_title: Congratulations! You’ve just added your first
+    congrats_btn: Don’t stop, let’s add other one
+    use_secure_deal: Use secure deal in order to get rid of unnecessary risk <br/> Add a link to the offer and contact details and get your service
+    get_started: Get started!
+    try_it_for_free: Try for free
+    got_to_market: Go to marketplace
+    you_have_anew_message: You have a new message from %{from}, go to cabinet for reply
+    you_have_anew_inquiry: You have a new message from %{from}
+    you_have_unpayed_inquiry: You have a new message from %{from}, please pay the subscription
+    decline: Decline
+    submited_new_po: Submited new PO
+    confirmed_new_po: Confirmed PO
+    updated_po: Updated PO
+    upload_signed_document: Upload signed document
+    upload_new_file: Upload new file
+    cancell_po: Cancelled PO
+    add_required_info: Add required info
+    po_negotiations_need_approve_desc: Please open PO and confirm or decline it
+    you_need_to_load_documents: Please add required documents
+    po_prepare_sign_desc: Please upload signed documents, you can use your own or download a template
+    po_after_sign_desc: Please download seller signed documents and sign it.
+    po_wait_for_seller_download: Please wait untill seller upload signed documents
+    wait_for_buyer_sign: Please wait for buyer sign
+    po_wait_sign_desc: Please wait until seller check the documents
+    download_document_to_sign: Download documents to sign
+    uploaded_signed_documents: Uploaded signed documents
+    start_complain_the_po: Started a complain
+    wait_for_partner_sign: Please wait for buyer approve
+    confirmed_sign_po: Confirmed the signature of the documents
+    confirm_the_step_is_completed: Are you sure the step is completed?
+    added_po_files: Upload new files
+    step_completed: Completed `%{step}` step
+    step_completed_many: Step updated
+    step_updated: Set `%{field}` as %{value}
+    cancelled_the_po: Cancelled PO
+    process_all: All
+    filters: Filters
+    please_wait_for_replay: Thank you for your request. While we are checking all detail check our marketplace
+    process_active: Active
+    process_inactive: Inactive
+    proces_statuses:
+      draft: "Draft"
+      created: "Created"
+      in_progress: "In progress"
+      cancelled: "Cancelled"
+      completed: "Completed"
+    po_documents: List of required documents
+    po_delivery: Delivery terms
+    po_delivery_title: Delivery
+    po_post_pay: Post payment
+    po_pre_pay: Pre payment
+    po_pay_title: Payment
+    po_pay_terms: Payment terms
+    po_price: Price
+    po_quantity: Quantity
+    po_goods: Goods
+    complain: Complain
+    cancell: Cancell
+    po_inspection: Inspection
+    shiping_lines: Shipping lines
+    port_of_desination: Port of destination
+    add: Add
+    phone: Phone
+    link_to_offer: Link to the offer
+    manager: Manager
+    name_of_party: Name of notify party
+    name_of_consignee: Name of consignee
+    preferable_transit: Preferable transit time
+    add_additional_person: Add additional contact person
+    submit_purchage_order: Submit Purchase Order
+    name_of_goods: Name of the goods for BL
+    country_of_production: Country of production
+    upload_a_picture: Upload a picture
+    po_country_of_origin: Producer/Country of origin
+    po_month_of_production: Month of production
+    po_contact_person: Contact person info
+    po_additional_contact_person: Additional contact person
+    po_company_info: Company info
+    po_upload_own: Upload Purchase Order
+    po_please_upload: Please upload all required documents to continue
+    po_negotiations_desc: Waiting for partner approve
+    submit_po: Submit PO
+    telex: Telex release of original BL
+    consignee: Consignee responsible person for order receipt
+    save_as_draft: Save as a draft
+    session_expired: You are not logged
+    only_for_members: <a href="/pricing" target="_blank" >Members only</a>
+    only_for_members_company: <a href="/pricing" target="_blank" class="company-name--link" onclick="clickLogin(event)" >Members only</a>
+    only_for_users: <a href="#/login" onclick="clickLogin(event)" >Please login</a>
+    
+    login_to_see_company_name: <a href="#/login" class="company-name--link__not-logged" onclick="clickLogin(event)" >Login to see company name</a>
+
+    login_to_see_company_name_offer: <a href="#/login" class="company-name--link__not-logged" onclick="clickLogin(event,'LogInOffer')" >Login to see company name</a>
+    login_to_see_company_name_request: <a href="#/login" class="company-name--link__not-logged" onclick="clickLogin(event, 'LogInRequest')" >Login to see company name</a>
+
+    to_give_a_bid: To give bid, join a membership
+    to_start_business_processes: To start business processes, join a membership
+    to_start_chatting: To start a chatting, join a membership
+    company_title: <a class="company-name--link" href="#/company/%{id}" >%{title}</a>
+    conversations_create_login: Please login to start chatting
+    proceses_start_login: Please login to start business process
+    offers_bid_login: Please login to start bidding
+    requests_bid_login: Please login to start bidding
+    offers_my_login: Please login to send your offers
+    requests_send_offers_login: Please login to send your offers
+    offers_bid_membership: To give bid, join a membership
+    requests_bid_membership: To give bid, join a membership
+    proceses_start_membership: To start business processes, join a membership
+    conversations_create_membership: To start a chatting, join a membership
+    offers_my_membership: To start sending offers, join a membership
+    requests_send_offers_membership: To start sending offers, join a membership
+    message_add_membership: The sender’s subscription has ended, to continue the correspondence, join the membership
+    faq: FAQ
+    hot: HOT
+    free: Free
+    quantity: Quantity T
+    quantity_sell: Quantity You sell in
+    company_isnt_on_map: This company has not located on the map yet
+    certificates: Certificates
+    new_password_sended: New password sended to your email
+    you_need_to_enter_correct: You need to enter correct
+    position: Position
+    process: Business Process
+    my_bp: Business Process
+    map_search: Search Companies, RFQ...
+    news: News
+    marketplace: Marketplace
+    services: Services
+    about_us: About Us
+    how_it_works: How it works?
+    mail_enter: Enter your email
+    services_list:
+      verification: Verification
+      safe_deal: Safe deal
+    benefits: Benefits
+    benefits_list:
+      for_seller: For seller
+      for_buyer: For buyer
+    transaction_statuses:
+      payed: Payed
+      created: Created
+      failed: Failed
+    marketplaces:
+      meat: Meat
+      # vegetables: Vegetables
+      # fruits: Fruits
+    sended: Sended
+    received: Received
+    fields:
+      market: market
+      phone: phone
+      email: email
+      first_name: first name
+      last_name: last name
+      company_name: company name
+      password: password
+      address: address
+      price: price
+      payment_type: payment type
+      delivery: delivery
+      delivery_port: delivery port
+      sea_lines: shipping lines
+      password_confirmation: password confirmation
+      role: role
+      quantity: quantity
+      goods: goods
+    emails:
+      inq_registration: Try to contact the supplier directly, confirm your chat
+      change_password: New password on Global Supplies
+      remind_password: Password remind Global Supplies
+      registration: Registration on Global Supplies
+      notification: Notification from Global Supplies
+      verify: Email verification on Global Supplies
+      subscription: New products on Global Supplies
+      success_transaction: Success transaction on Global Supplies
+      send_offers: You receive a new offers on Global Supplies
+      chat_message: You receive a new message on Global Supplies
+    payment_success: Payment success!
+    check_your_email: The insctructions was sent to your email
+    instructions_was_sended_to_email: The insctructions was sent to your email
+
+    payment_cancelled: Payment cancelled!
+    you_are_verified: Well done! Your account is verified! Now You can start using our platform. We will contact you shortly!
+
+    not_verificated: Please verify your email, the link was sent to %{email}, if you dont receive the code, please click this %{link}
+    link: link
+    ratings:
+      authorization: Company authorization
+      activity: Activity on GlobalSupplies
+      info: Profile info,
+      offers: Marketplace activity
+    notification_types:
+      offer: Show Offer
+      offers: Show Offers
+      process: PO
+      pricing: Get more limits
+    pricing: Pricing | -50% OFF till Friday
+    christmas_pricing: Christmas pricing
+    packages:
+      offers_count: Post product request
+      requests_count: Post product request
+      received_inquries: Receive product inquiries
+      replyies_to_inquries: Replyies to inquiries
+      active_chats: Active direct chats
+      show_infos: Companies info access
+      buyer_allerts: Buyer alerts
+      sub_accounts: Sub Accounts
+      top_offers: TOP offers
+      sended_inquries: Sended inquiries
+      buyer_alerts: Buyer alerts
+    benefits_seller:
+      main_title: Publish your offer on Global Supplies and get a bid!
+      main_subtitle: "4000+ verified importers from all over the world are looking for sellers on Global Supplies. Add your product, make an offer and they will find you shortly. Global Supply has:"
+      main_list_1: 60,000 meat market participants
+      main_list_2: 7,000 website visitors every day
+      main_list_3: every 12th product request resulted in a successful deal
+      form_title: Add your offer in 30 seconds
+      video_block_title: Global Supplies is an international B2B marketplace for wholesale trading of meat products
+      video_block_p_1: We have created for you a simple and convenient way to do your business remotely and present your product list online. Publish your offer for free and get your first customer inquiries from all over the world.
+      video_block_p_2: Communicate directly with your future business partner in a safe meat marketplace Global Supplies!
+      video_block_p_3: Our report “TOP 10 products 2020” will provide you with the information about the demand for your product in the wholesale market.
+      download_report: Download report
+      features_title: Why importers are looking for suppliers on Global Supplies
+      feature_1: 60,000+ market participants and potential partners
+      feature_2: 7,000+ website visitors daily
+      feature_3: 99% conversion of every 40th message into a signed contract
+      feature_4: 175 business groups with an audience of 300,000+ potential customers
+      special_price_title: Only today buy at a special price! 20% off on any service package
+      acc_1_title: Our Gaurantee
+      acc_1_p: We guarantee successful deals already in the 1st month!
+      acc_2_title: "Calculate it with us:"
+      acc_2_p_1: Supposedly, the base of your b2b partners = 1000
+      acc_2_p_2: Sales volume = 10 containers per month
+      acc_2_p_3: "Therefore: 10/1000 = 0.01 = 1% conversion"
+      acc_3_title: Reach more companies
+      acc_3_p_1: With Global Supplies, you will enhance the reach of your offer by at least 60 times!
+      acc_3_p_2: 60000 * 1% = 600 partners ready for agreement!
+      special_offer_title: Special offer for you
+      special_offer_p_1: Only today you have the opportunity to get a 20% discount on ANY<br> Global Supplies service package.
+      special_offer_p_2: Click on "Get a discount" - select a package - pay within 24 hours.
+      special_offer_p_3: The better the package, the more savings for you!
+      special_offer_p_4: GET INVOICE with a DISCOUNT via EMAIL
+      get_discount: Get a discount
+    benefits_buyer:
+      main_title: Let's find best meat offers on Global Supplies
+      main_subtitle: Just enter the name of meat product you are interested in and see all results
+      products_gallery_title: Check out latest meat offers from TOP suppliers
+      products_gallery_subtitle: Only HOT offers of beef, pork and poultry from international meat suppliers and manufactures available on our marketplace. Press on offer you are interested in or just go the marketplace and see all offers
+      features_title: Discover the benefits of doing business on Global Supplies
+    pricing_page:
+      christmas_offer: Due to Christmas holidays,Global Supplies gives special offer for our premium memberships -50% of our normal pricing.
+      subtitle: If You want to meet new trusted partners join our premium membership. Show your offers to the whole world!
+      try_us_title: Try Global Supplies free-forever
+      try_us_text: No credit card required. No trial period. No risk.
+      benefit_1: Reliable suppliers
+      benefit_2: Verified buyers
+      benefit_3: +20 000 contacts
+      benefit_4: Personal manager for best members
+      service_membership: Service/membership
+      post_product_offer: Post product offer
+      post_product_rfq: Post product request
+      show_cntcts_infos: Show Company contacts
+      receive_product_inquiries: Receive product inquiries
+      active_direct_chats: Active direct chats
+      access_to_trading_map: Access to trading map
+      premium_sell: Premium sell on marketplace
+      buyer_alerts: Buyer alerts
+      sub_accounts: Sub Accounts
+      company_performance: Company performance
+      industry_reports: Industry reports
+      human_assistance: Human assistance
+      custumer_support: Custumer Support
+      personal_manager: Personal Manager
+      research: Target offers/reqeuests research
+      target_lead: Target lead per month
+      digital_services: Digital services
+      logo_design: Profesional Logo design
+      adwords: Google adwords
+      google_search: Google Search Optimisation
+      email_marketing: Email Marketing Campaigns
+      social_media: Social Media Marketing
+      form_title: Still have questions?
+      form_subtitle: Left your phone number and we'll contact You!
+    success_deleted: Successfully deleted!
+    ivoice_statuses:
+      created: On review
+      approved: Approved
+      rejected: Rejected
+    you_need_agree: You need to agree the terms
+    points_left_to: Points left to
+    points_to: points left to get
+    status: status
+    turn: Turn
+    offers_sended: Submitted his offers
+    bill_on_review: Bill on review
+    passport_on_review: Passport on review
+    new_bid: Place a BID
+    server_error: Server error please contact administrator
+    how_it_works: How it works
+    add_passport: Add Pasport
+    place_your_document: Add Document
+    bill_verified: Bill Verified
+    verified: Verified
+    pasport_verified: Pasport Verified
+    items_selected: items selected
+    item_id: Item ID
+    possible_sell_units: Possible sell units
+    select_offers_to_sent: Select your offers to...
+    add_bill: Add Bill
+    get_service: Get Service
+    place_your_invoice: Add your invoice
+    place_your_documents: Add verification documents
+    inbox: Inbox
+    transactions: Transactions
+    invoices: Invoices
+    bids: Bids
+    my_information: My Information
+    my_bids: My BIDs
+    my_invoices: My invoices
+    my_transactions: My transactions
+    heading_request: All requests
+
+    notifications: Notifications
+    drag_file: Drag a file here or
+    rfq_without_price: Open to offers
+    company_information: Company Information
+    all_categories: All categories
+    chart:
+      bids_in_count: Incomming BIDs
+      incoming_chats_count: Incomming chats
+      active_offers: Active offers
+      incomming_offer_views: Offer views
+      incomming_uniq_offer_views: Uniqe offer views
+      incomming_invoice: Added invoices
+      incomming_safe_deals_count: Incomming safe deals
+      bids_out_count: Outgoing BIDs
+      outgoing_chats_count: Outgoing chats
+      outgoing_offer_views: Viewed offers
+      outgoing_uniq_offer_views: Uniqe offers viewed
+      outgoing_invoice: Added invoices
+      outgoing_safe_deals_count: Outgoing safe deals
+    back: Back
+    save: Save
+    edit: Edit
+    open: Open
+    total: Total
+    company_status: Company Status
+    delete: Delete
+    first_name: First name
+    last_name: Last name
+    email: Email
+    clear_all: Clear all
+    edit_info: Edit information
+    all_incoterms: Applicable incoterms
+    selected_category: Selected category
+    done: Done
+    apply: Apply
+    info: Info
+    add_photo: Add photo
+    select_category_title: "Select category"
+    select_category: "Select category*"
+    upload_photo: Upload photo
+    upload: upload
+    upload_signed_po: Upload Signed doc
+    purchase_order: Purchase order
+    open_po: Open PO
+    download: Download
+    from_computer: it from your computer
+    photo_size_notice: The size of 1 photo should not be larger than 10MB If larger - offer will not be saved
+    post_offer: Post offer
+    post_request: Post request
+    list_view: List view
+    map_view: Map view
+    categories: Categories
+    sellers_offers: Seller’s offers
+    characteristic: Characteristic
+    shipping_and_payment: Shipping & Payment details
+    preferable_loading: Preferable week of loading
+    port_of_desination: Port of destination
+    length_from: Length from
+    description: Description
+    offer_documents: Documents that you vsn provide
+    preferable_delivery: Preferable incoterms
+    allowed_payment_types: Choose payments terms
+    choose_port: Choose port
+    package_type: Packaging type
+    change_photo: Change photo
+    change: Change password
+    password_change: Password change
+    from: From
+    to: To
+    length_to: Length to
+    verificate_me: Verificate me
+    weight_from: Weight from
+    weight_to: Weight to
+    last_year: Last year
+    last_week: Last week
+    last_quarter: Last quarter
+    my_profile: My profile
+    messages: Messages
+    company_profile: Company profile
+    all_processes: All bussiness processes
+    chat: Chat
+    chat_text: Write something...
+    add_offer: Add Offer
+    add_request: Add Request
+    logout: Logout
+    edit_info: Edit information
+    more: More
+    my_offers: My offers
+    my_requests: My requests
+    edit_my_info: Edit my info
+    users_activity: Users activity
+    your_activity: Your activity
+    team_members: Team members
+    transactions: Transactions
+    my_processes: My Bussiness proccesses
+    add_new_member: Add new member
+    add_new_offer: Add new offer
+    step: Step
+    next: Next
+    cancel: Cancel
+    add_new_request: Add new request
+    add_new_offer: Add new offer
+    send_my_ofers: Send my offers
+    contact_us: Contact Us
+    back_to_list: Back to list
+    all_rights_reserved: All rights reserved
+    home: Home
+
+    sellers: Sellers
+    buyers: Buyers
+    all: All
+    traders: Traders
+
+    start_chat: Start chat
+    add_my_company_to_map: Add my company to the map
+    bids_on_offer: BIDs on this offer
+    date_header: Date
+    company: Company
+    all_seller_offers: All seller’s offers
+    company_offers: Company offers
+    company_requests: Company requests
+    info: Info
+    contract_template: Contract template
+    po_template: PO template
+    show_details: Show details
+    download_pdf: Download pdf
+    go: Go
+    go_to_page: Go to page
+    go_to_map: Go to map
+    map: Map
+    send: Send
+    your_name: Your name
+    your_email: Your email
+    your_message: Your message
+    _OK: OK
+    login: Login
+    registeration: Registration
+    register: Register
+    place_your_bid: Place Your BID
+    recomended_for_you: Recommended for you
+    comment: Comment
+    comments: Comments
+    price_mt: Price MT
+    price_from_mt: Price from MT
+    price_to_mt: Price to MT
+    restore: Restore password
+    success_saved: Successfully saved
+    remind: Remind password
+    email_placeholder: Email
+    password_placeholder: Password
+    password_confirm_placeholder: Confirm Password
+    already_registered: Already have an account
+    terms_and_conditions: terms and conditions
+    i_agree: I agree with the
+    forgot_password: Forgot password?
+    did_you_havent_account_yet: You do not have an account?
+    title: The best Wholesale offers for meat Global Supplies
+    username_placeholder: Your name
+    company_name: Company name
+
+    heading_offers: All offers
+    heading_requests: All requests
+    search_offers: Search offers
+    search_requests: Search requests
+
+    offers: Offers
+    offer: Offer
+    requests: Requests
+    request: Request
+    chats: Chat
+    bid: BID
+    send_my_offers: Send my offers
+    details: Details
+    view_on_map: View on map
+    start_business_process: Start bussiness process
+    chat_file_name: "Attached file <a href=\"%{link}\" target=\"_blank\">%{name}</a>"
+    this_field_is_requered: This field is required
+    select_specification: Enter weight/length
+    select_package_type: Select package type
+    select_description: Enter description
+    select_origin: Select country of origin
+    select_delivery_conditions: Choose Incoterms
+    select_permissions_to: Choose permissions to
+    select_port: Select port
+    select_payment_types: Select payment terms
+    select_quantity: Enter quantity
+    select_price_from: Enter price from
+    select_price_to: Enter price to
+    select_documents: Select documents you can provide
+    select_documents_need: Select needed documents
+    select_certificates: Select certificates
+    select_product_category: Select product category
+    enter_first_name: Enter first name
+    enter_last_name: Enter last name
+    enter_email: Enter email
+    enter_phone_number: Enter phone
+    enter_position: Enter position
+    enter_company_role: Select company role
+    enter_company_name: Enter company name
+    enter_year_establishment: Choose company established
+    enter_total_emploees: Select total employees
+    enter_fabout: Write something about company
+    enter_plant_number: Enter plant number
+    enter_zip_address: Company zip address
+    enter_zip: ZIP
+    enter_address: Company address
+    enter_city: Enter company city
+    enter_country: Select company country
+    enter_iban: IBAN
+    enter_swift: SWIFT
+    enter_bank: Bank
+    enter_bank_country: Bank country
+    enter_eori: EORI
+    enter_vat: VAT
+    enter_tic: TIC
+
+
+    links:
+      how-it-works: How it works
+      about-us: About us
+      news: News
+      companies: Companies
+      faq: Faq
+
+    sort_by: "Sort by:"
+    sorting:
+      updated_at: 'Time adding'
+      rating: Rating
+      price_from: Price
+
+    origin: Countries of origin
+    origin_country: Country of origin
+    origin_plc: US,GB,UA...
+    permissions: Permission to
+
+    permissions_plc: Europe,Asia...
+    paymnet_terms: Payment Terms
+    paymnet_terms_short: Payment
+    delivery_short: Delivery
+    paymnet_terms_plc: FOP...
+    delivery: Delivery conditions
+    delivery_plc: EXW...
+    price_filter: EXW Price
+    last_bid: Last BID
+    attach_file: Attach file
+    file_to_large_1: File too large, 3MB max
+    or_submit_po: To start Your business process
+    submit_po: Submit PO
+    confirm_po: Confirm PO
+    start_safe_deal: Start Safe deal
+    learn_more: Learn more
+    po_sign_desc: Please click to confirm PO is signed from both sides and you can continue work with logistic
+    po_ssafe_deal_desc: First time working with this company? Not sure about the reliability of Your potential partner? Can not agree on some details such as logistics, payment terms and quality control? Global Supplies will take all the risks.
+    po_status:
+      new: New
+      negotiations: Negotiations
+      signed: PO signed
+
+    stage: Stage
+    attachments: Attachments
+    steps:
+      _0: Preparation
+      _1: Logistics
+      _2: Finish
+
+    company_info:
+      roles:
+        trader: Trader
+        seller: Seller
+        buyer: Buyer
+      role: Role
+      company_name: Comnpany name
+      country: Country
+      address: Address
+      about: About Company
+      total_emploees: Total Employees
+      year_establishment: Year Established
+      success_deal: Successful deals on Global Supplies
+      plant_number: Plant number
+      iban: IBAN
+      swift: SWIFT
+      account_number: Account Number
+      tic: TIC
+      vat: VAT
+      eori: EORI
+      address: Address
+      representative: Representative
+      zip: Postal Code
+      zip_address: Postal address
+      bank_country: Bank country
+      bank: Bank name
+      city: City
+      phone: Contact number
+      email: Email
+
+    offer_info_short:
+      info_title: Info
+      shipping_title: Shipping & Payment details
+      packing_title: Packing
+      payment_terms: Payment terms
+      origin_title: Countries of origin
+      permissions: Permission to
+      quantity: Quantity
+      delivery_conditions: Incoterms
+      documents: Specification documents
+      package_type: Package type
+      weight: Weight
+      length: Length
+      port: Port
+      about: Description
+
+
+  errors:
+    chat_conversation:
+      you_cant_send_message_to_yourself: You cant send message to yourself
+    chat_message:
+      chat_not_found: Chat not found
+      cant_add_message: Cant add message
+    meat_company_user:
+      unregistered: The link was sent to your email if you are registered
+      wrong_or_expired_code: The link is expired or incorrect
+      unknown_user: User name or password is incorrect
+      existed_user: "User exist"
+      already_logged_in: "Already logged in"
+      wrong_credentials: Wrong email or password
+      blocked: You are blocked,please contact administrator
+      wrong_verification: Verification code wrong or exipred
+      already_delivered: Restore code already delivered, please check your email or try after 2 hours

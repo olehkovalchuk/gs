@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,latin-ext');
+@import 'node_modules/vue-select/src/scss/vue-select';
+@import 'node_modules/vue-phone-number-input/dist/vue-phone-number-input';
+@import 'node_modules/vue-loading-overlay/dist/vue-loading';
+
+@import '_colors';
+@import '_popup';
+
+@import '_header';
+@import '_footer';
+
+
+.modal-backdrop{
+  opacity: 0.5
+}

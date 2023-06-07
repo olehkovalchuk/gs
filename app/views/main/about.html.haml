@@ -1,0 +1,92 @@
+-content_for :meta_title, 'About us | Global Supplies' 
+-content_for :meta_description, "About us | Global Supplies | #{t("meta.global_static_description")}"
+.about-us
+  %section.history
+    .container
+      %h1=t("about.history").html_safe
+  %section.banner
+    .container
+      .left=t("about.left_text").html_safe
+      .right
+        %h2 about us
+        .bg-shape
+        =image_tag "about_photo.png"
+  %section.history
+    .container
+      .history--item
+        .year-mark
+          2016
+        .text-block.right
+          .triangle.triangle--left
+          =t("about.year_2016").html_safe
+      .history--item
+        .year-mark
+          2018
+        .text-block.left
+          .triangle.triangle--right
+          =t("about.year_2018").html_safe
+      .history--item
+        .year-mark.year-mark--current
+          2019
+        .text-block.right
+          .triangle.triangle--left
+          =t("about.year_2019").html_safe
+  %section.goals-block
+    .container
+      .goals-block--item
+        .goals-block--item-heading
+          %h3=t("about.our_mission")
+        .goals-block--item-text=t("about.our_mission_text").html_safe
+      .goals-block--item
+        .goals-block--item-heading
+          %h3=t("about.vision")
+        .goals-block--item-text=t("about.vision_text").html_safe
+      .goals-block--item
+        .goals-block--item-heading
+          %h3=t("about.goals")
+        .goals-block--item-text
+          %ul
+            %li
+              %span.red >
+              =t("about.goal_1")
+            %li
+              %span.red >
+              =t("about.goal_2")
+            %li
+              %span.red >
+              =t("about.goal_3")
+  %section.our-values
+    %h2=t("about.our_values")
+    .container
+      .our-values--item
+        .our-values--item-icon.supplies
+          =image_tag "icon-carrot.svg"
+        .our-values--item-text
+          %h3=t("about.our_values_1")
+          %p=t("about.our_values_1_text")
+      .our-values--item
+        .our-values--item-icon.reaction
+          =image_tag "icon-timer.svg"
+        .our-values--item-text
+          %h3=t("about.our_values_2")
+          %p=t("about.our_values_2_text")
+      .our-values--item
+        .our-values--item-icon.security
+          =image_tag "icon-shield_dollar.svg"
+        .our-values--item-text
+          %h3=t("about.our_values_3")
+          %p=t("about.our_values_3_text")
+      .our-values--item
+        .our-values--item-icon.people
+          =image_tag "icon-people.svg"
+        .our-values--item-text
+          %h3=t("about.our_values_4")
+          %p=t("about.our_values_4_text")
+  %section.coworking-block
+    .bg-shape.one
+    .bg-shape.two
+    .container
+      .get-started
+        %h3=t("about.cooperation")
+        %p=t("about.cooperation_text").html_safe
+        %a.btn{href:marketplace_path, onclick:"clickLogin(event)"}=t("common.get_started")

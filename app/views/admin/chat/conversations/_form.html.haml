@@ -1,0 +1,18 @@
+/ begin widget-chat
+.widget-chat.widget-chat-rounded
+  / begin widget-chat-body
+  .widget-chat-body
+    .widget-chat-item.with-media.left{ng_repeat:"message in editedItem.messages", ng_class:"message.message_cls"}
+      .widget-chat-media
+        %img{ ng_src: "{{message.logo}}"}/
+      .widget-chat-info
+        .widget-chat-info-container
+          .widget-chat-name.text-indigo {{message.sender}}
+          .widget-chat-message {{message.text}}
+          .widget-chat-message{ng_if:"message.bottom_text", ng_bind_html:"message.bottom_text"}
+          %br
+          .widget-chat-time {{message.created_at}}
+
+
+  / end widget-chat-body
+/ end widget-chat

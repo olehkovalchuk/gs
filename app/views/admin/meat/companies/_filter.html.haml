@@ -1,0 +1,11 @@
+=yes_no_filter :active
+=yes_no_filter :moderated
+=yes_no_filter :on_map
+=yes_no_filter :bill_verified
+=yes_no_filter :pasport_verified
+=select_filter :role ,['seller','buyer','trader']
+=select_filter :country_code ,@countries
+
+%fieldset
+  %legend=t("admin.modules.created_at")
+  =range_date_time_filter :created_at

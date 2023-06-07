@@ -1,0 +1,31 @@
+-content_for :meta_title, @meta_title
+-content_for :meta_description, @description
+.blog-page
+  -# %app-seo-products{id: "app-seo-products"}
+  .container.article-container
+    .blog-article
+      / = image_tag "marketing.jpeg"
+      .article--text
+        %h1.article--title=@title
+        %p
+          %strong=@description
+        %p=@text.html_safe
+    .seo-page-products
+      %app-seo-products{id: "app-seo-products", data: {id: @id }}
+    =render "articles/mailing"
+.how-it-works{style:"margin-top:100px"}
+  %section.service-form-section
+    .bg-shape.one
+    .bg-shape.two
+    .container
+      .register-block
+        %p=t("how_it_works.register")
+        %a.btn{href:marketplace_path, onclick:"clickLogin(event)"}=t("common.register")
+
+
+
+
+
+
+
+

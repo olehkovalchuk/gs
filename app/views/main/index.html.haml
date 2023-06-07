@@ -1,0 +1,4 @@
+-content_for :meta_title, @meta_title.presence || t("meta.marketplace_title")
+-content_for :meta_description, @meta_desc.presence || t("meta.marketplace_description")
+- if @meta_image.presence
+  -content_for :meta_image, @meta_image

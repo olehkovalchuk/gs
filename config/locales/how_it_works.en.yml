@@ -1,0 +1,24 @@
+en:
+  how_it_works:
+    how: HOW
+    it_works: IT WORKS
+    step: Step %{step}
+    just_steps: Just three steps to gain more leads and conversion
+    register: Register and Find best offers and suppliers around the world
+    step_1: Register and Find best offers and suppliers around the world by a few clicks
+    step_1_desc: >
+      After simple free registration, you will have access to prices, chat and map details.<br/>
+      Using our friendly filters, you can easily find appropriate partners with up to date prices.<br/>
+      Search new offers and Contact potential partners.
+    step_2: Adding offer and request will take not more than 1 minute
+    step_2_desc: >
+      Believe, we tried many times! Published offers will help other users who need your products to find your
+      company. After adding, the proposal will be available on the map (if your company is added to the map), in
+      the marketplace and alerts users subscribed to the section
+    step_3: Stay safe. Use business process on the platform
+    step_3_desc: >
+      In our business process system, you can easily share and save all key documents such as Contract, Purchase
+      order and other product specification. All documents regarding the deal in one safe place. See all the
+      changes in the shipment (ETA, ETD). Track your deal progress.
+
+

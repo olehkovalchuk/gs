@@ -1,0 +1,136 @@
+.row
+  .col-md-12
+    =image_block :logo
+.row
+  .col-md-6{ng_if:"editedItem.passport"}
+    %a{href:"{{editedItem.passport}}", target: "_blank"} Show passport
+    %a.btn.btn-danger{ng_click:"delete_passport(editedItem)", ng_show: "ifExist('delete_passport')", href:"#"} Delete
+  .col-md-6{ng_if:"editedItem.bill"}
+    %a{href:"{{editedItem.bill}}", target: "_blank"} Show bill
+    %a.btn.btn-danger{ng_click:"delete_bill(editedItem)", ng_show: "ifExist('delete_bill')", href:"#"} Delete
+.row
+  .col-md-3
+    =string_block :title, required: true
+  .col-md-3
+    =string_block :phone, required: true
+  .col-md-3
+    =select_block :country_code, :countries, required: true
+  .col-md-3
+    =select_block :role, :roles, required: true
+
+.row
+  .col-md-3
+    = integer_block :offers_count_limit, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :requests_count_limit, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :received_inquries_limit, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :replyies_to_inquries_limit, ng_required: true, ng_minlength: 1
+.row
+  .col-md-3
+    = integer_block :active_chats_limit, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :show_infos_limit, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :buyer_allerts_limit, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :sub_accounts_limit, ng_required: true, ng_minlength: 1
+.row
+  .col-md-3
+    = integer_block :sended_inquries_limit, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :top_offers_limit, ng_required: true, ng_minlength: 1
+
+.row
+  .col-md-3
+    = integer_block :offers_count_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :requests_count_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :received_inquries_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :replyies_to_inquries_used, ng_required: true, ng_minlength: 1
+.row
+  .col-md-3
+    = integer_block :active_chats_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :show_infos_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :buyer_allerts_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :sub_accounts_used, ng_required: true, ng_minlength: 1
+.row
+  .col-md-3
+    = integer_block :sended_inquries_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = integer_block :top_offers_used, ng_required: true, ng_minlength: 1
+  .col-md-3
+    = date_block :package_expiration, required: true, ng_required: true
+  .col-md-3
+    = select_block :rating_code, :ratings, required: true
+.row
+  .col-md-3
+    =select_block :bank_country, :countries
+  .col-md-3
+    =string_block :bank
+  .col-md-2
+    =string_block :iban
+  .col-md-2
+    =string_block :swift
+  .col-md-2
+    =string_block :account_number
+
+.row
+  .col-md-2
+    =string_block :tic
+  .col-md-2
+    =string_block :vat
+  .col-md-2
+    =string_block :eori
+
+.row
+  .col-md-3
+    =string_block :representative
+  .col-md-3
+    =integer_block :total_emploees
+  .col-md-3
+    =integer_block :year_establishment
+  .col-md-3
+    =string_block :plant_number
+
+.row
+  .col-md-12
+    =text_block :about
+
+
+.row
+  .col-md-3
+    =string_block :city
+  .col-md-3
+    =string_block :address
+  .col-md-3
+    =string_block :zip
+  .col-md-3
+    =string_block :zip_address
+.row
+  .col-md-3
+    = state_block :pasport_verified, initial_value: 'false'
+  .col-md-3
+    = state_block :bill_verified, initial_value: 'false'
+  .col-md-3
+    = state_block :moderated, initial_value: 'false'
+  .col-md-3
+    = state_block :on_map, initial_value: 'false'
+.row
+  .col-md-3
+    = state_block :active, initial_value: 'false'
+  .col-md-2
+    = state_block :blocked, initial_value: 'false'
+  .col-md-2
+    = date_time_block :blocked_until, required: true, ng_required: 'editedItem.blocked', ng_disabled: '!editedItem.blocked', min_date: ''
+.row
+  .col-md-12
+    =map_block
+
+

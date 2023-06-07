@@ -1,0 +1,9 @@
+.service-form
+  = form_for Chat::Contact.new, url: service_path do |f|
+    %p=t("common.use_secure_deal").html_safe
+    .form_row
+      = f.text_field :text, class: "txtinput", placeholder: t("common.link_to_offer"), required: true
+      = f.text_field :name, class: "txtinput", placeholder: t("common.phone"), required: true
+    .form_row
+      = f.email_field :email, class: "txtinput", placeholder: t("common.email"), required: true
+      = f.submit t("common.get_service"), class: "btn"

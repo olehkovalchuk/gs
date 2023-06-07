@@ -1,0 +1,19 @@
+.row
+  .col-md-3
+    = state_block :active, initial_value: :false
+  .col-md-3
+    = state_block :safe_deal, initial_value: :false
+  .col-md-3
+    = string_block :code, ng_required: true
+
+.row
+  .col-md-4
+    = state_block :need_seller_country, initial_value: :false
+  .col-md-4
+    = state_block :need_sea_line, initial_value: :false
+  .col-md-4
+    = state_block :need_seller_port, initial_value: :false
+  -# .col-md-3
+  -#   = state_block :need_buyer_port, initial_value: :false
+  -# .col-md-3
+  -#   = state_block :need_buyer_country, initial_value: :false

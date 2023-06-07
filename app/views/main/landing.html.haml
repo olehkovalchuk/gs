@@ -1,0 +1,74 @@
+.main-landing
+  %section.hero
+    .container
+      .left
+        %h1 Global Supplies
+        %h2 International b2b marketplace for direct wholesale trading of meat products
+        %p.hero--subtitle
+          Buy and sell meat using the first B2B platform where you can trade
+          = succeed "online" do
+            %br/
+        %a.btn.btn__white{href:marketplace_path, onclick:"clickLogin(event)"}=t("common.get_started")
+      .right
+        =image_tag "mac.png", alt: 'Global Supplies', title: 'Global Supplies'
+  %section.benefits-list
+    .container
+      .benefits-list--item
+        .img{"data-aos" => "fade-down-right", "data-aos-delay" => "300", "data-aos-duration" => "1000"}
+          =image_tag "search.png", alt: 'Global Supplies - Find your partners', title: 'Global Supplies Find tour partners'
+        .text{"data-aos" => "fade-down-left", "data-aos-delay" => "600", "data-aos-duration" => "1000"}
+          %h3 Convenient search queries and goods
+          %p
+            Global Supplies is an online information platform for the meat b2b market.
+            On this web site you can search for current offers and requests.
+            Here you have the opportunity for easily finding the importers or suppliers of meat products.
+            Get financial guarantees of their honesty and make a successful deals
+          %a.btn.btn__transparent.btn__small{href:marketplace_path}=t("common.got_to_market")
+      .benefits-list--item
+        .img{"data-aos" => "fade-left", "data-aos-delay" => "300", "data-aos-duration" => "1000"}
+          =image_tag "map.png", alt: 'Global Supplies - The Best compaies on map', title: 'Global Supplies - The Best companies on map'
+        .text{"data-aos" => "fade-right", "data-aos-delay" => "600", "data-aos-duration" => "1000"}
+          %h3 Search for new partners
+          %p Search for new partners by country, available nomenclature documentation and declared standards of cooperation.
+          %a.btn.btn__transparent.btn__small{href:marketplace_path(anchor:"/map")}=t("common.go_to_map")
+      .benefits-list--item
+        .img{"data-aos" => "fade-right", "data-aos-delay" => "300", "data-aos-duration" => "1000"}
+          =image_tag "bid.png", alt: 'Global Supplies - Give a BID for potential partner', title: 'Global Supplies- Give a BID for potential partner'
+        .text{"data-aos" => "fade-left", "data-aos-delay" => "600", "data-aos-duration" => "1000"}
+          %h3 Bidding
+          %p Give online bidding for offers and requests, comment prices, payment terms and methods of delivery. Offer your own terms of transaction
+      .benefits-list--item
+        .img{"data-aos" => "fade-left", "data-aos-delay" => "300", "data-aos-duration" => "1000"}
+          =image_tag "safe-deal.png", alt: 'Global Supplies - Safe Deal', title: 'Global Supplies - Safe Deal'
+        .text{"data-aos" => "fade-right", "data-aos-delay" => "600", "data-aos-duration" => "1000"}
+          %h3 Safe deals
+          %p Securely purchase products that are guaranteed to save funds directly on behalf of the platform, with an open commission fee
+          %a.btn.btn__transparent.btn__small{:href => "/services/safe_deal"}=t("common.details")
+      .benefits-list--item
+        .img{"data-aos" => "fade-up-right", "data-aos-delay" => "300", "data-aos-duration" => "1000"}
+          =image_tag "data.png", alt: 'Global Supplies - Analitics', title: 'Global Supplies - Analitics'
+        .text{"data-aos" => "fade-up-left", "data-aos-delay" => "600", "data-aos-duration" => "1000"}
+          %h3 Small Data
+          %p Give online bidding for offers and requests, comment prices, payment terms and methods of delivery. Offer your own terms of transaction
+  %section.instructions
+    .bg-shape.one
+    .bg-shape.two
+    .container
+      %h2.big-title It's easy
+      .instructions-list
+        .instructions-list--item
+          %strong 1
+          %p Start your verification on this page
+        .instructions-list--item
+          %strong 2
+          %p Add info about your company
+        .instructions-list--item
+          %strong 3
+          %p We will call you back and clarify all details
+        .instructions-list--item
+          %strong 4
+          %p Pay verification free
+        .text-block
+          %p If you want to constantly get new proven partners, increase the number and quality of successful deals, then it is up to us!
+          %a.btn{href:marketplace_path, onclick:"clickLogin(event)"}=t("common.get_started")
+

@@ -1,0 +1,197 @@
+-content_for :meta_title, 'Pricing | Global Supplies' 
+-content_for :meta_description, "Pricing | Global Supplies | #{t("meta.global_static_description")}"
+%section.pricing
+  .pricing--heading
+    .container
+      %h1.blog-page--title Pricing | Global Supplies
+      .subtitle 
+        %p=t("common.pricing_page.subtitle")
+      %h2.benefits--title=t("common.pricing_page.try_us_title")
+      .benefits
+        .benefits--item
+          %div
+            %p=t("common.pricing_page.try_us_text")
+          %a.btn.btn__white{href:marketplace_path, onclick:"clickLogin(event)"}=t("common.get_started")
+        .benefits--item
+          %ul.benefits--list
+            %li.benefits--list-item=t("common.pricing_page.benefit_1")
+            %li.benefits--list-item=t("common.pricing_page.benefit_2")
+            %li.benefits--list-item=t("common.pricing_page.benefit_3")
+            %li.benefits--list-item=t("common.pricing_page.benefit_4")
+  .container
+    .pricing-table--wrapper
+      .pricing-table
+        .pricing-table--heading
+          %div
+            %strong=t("common.pricing_page.service_membership")
+          - @items.each do |package|
+            .package-price
+              - if package.is_best
+                .best-offer Best offer
+              - if package.price > 0
+                %span=package.title
+                .price.red="$#{package.price}"
+                %small=package.description
+                .btn-block
+                  = form_tag(transactions_path) do
+                    = hidden_field_tag :id, package.id
+                    %button.btn{type: :submit, value: t("common.get_membership"), onclick:"socialTrack('#{package.rating_code.capitalize}Member',0,{currency:'USD',value: #{package.price}}) ; clickLogin(event)"}=t("common.get_membership")
+              - else
+                = package.title
+                %small=package.description
+        .pricing-table--title
+          %p Platform services
+        .pricing-table--item-wrapper
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.show_cntcts_infos")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_1", data: {type: "show_infos"}}
+            - @items.each do |package|
+              %div
+                - if package.show_infos < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.show_infos ? t("common.unlimited") : package.show_infos
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.post_product_offer")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_1", data: {type: "posted_offers"}}
+            - @items.each do |package|
+              %div
+                - if package.offers_count < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.offers_count ? t("common.unlimited") : package.offers_count
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.post_product_rfq")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_2", data: {type: "posted_requests"}}
+            - @items.each do |package|
+              %div
+                - if package.requests_count < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.requests_count ? t("common.unlimited") : package.requests_count
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.receive_product_inquiries")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_3", data: {type: "incoming_inquiries"}}
+            - @items.each do |package|
+              %div
+                - if package.received_inquries < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.received_inquries ? t("common.unlimited") : package.received_inquries
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.replyies_to_inquries")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_4", data: {type: "outcoming_inquiries"}}
+            - @items.each do |package|
+              %div
+                - if package.replyies_to_inquries < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.replyies_to_inquries ? t("common.unlimited") : package.replyies_to_inquries
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.active_direct_chats")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_5", data: {type: "chat_quantity"}}
+            - @items.each do |package|
+              %div
+                - if package.active_chats < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.active_chats ? t("common.unlimited") : package.active_chats
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.access_to_trading_map")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_6", data: {type: "access_to_trading_map"}}
+            - @items.each do |package|
+              %div
+                %span.symbol{class: package.map_access ? 'green' : 'red'}
+                  = package.map_access ? '✔' : '✕'
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.premium_sell")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_7", data: {type: "show_contact_info"}}
+            - @items.each do |package|
+              %div
+                - if 'fresh' == package.rating_code
+                  %span.red.symbol ✕
+                - else
+                  .company-status{class: package.rating_code}
+                    %svg{:viewbox => "0 0 14 14"}
+                      %path{:d => "M12.8712 5.33628L13.063 3.49938L11.3753 2.74841C11.3202 2.72393 11.2761 2.67984 11.2516 2.62483L10.5009 0.937167L8.6636 1.12919C8.60395 1.13513 8.54418 1.11897 8.4957 1.08392L7.00006 0L5.50442 1.08392C5.45582 1.11897 5.39605 1.13513 5.33652 1.12919L3.49914 0.937167L2.74841 2.62483C2.72405 2.67984 2.67996 2.72393 2.62483 2.74817L0.937167 3.49938L1.12895 5.33628C1.13513 5.39593 1.11909 5.45582 1.08392 5.50442L0 7.00006L1.08392 8.4957C1.11909 8.5443 1.13513 8.60419 1.12895 8.66384L0.937167 10.5006L2.62483 11.2516C2.67984 11.2761 2.72393 11.3202 2.74841 11.3753L3.49914 13.063L5.33652 12.8709C5.34472 12.8709 5.35327 12.8696 5.36076 12.8696C5.41209 12.8696 5.462 12.8859 5.50347 12.9162L7.00006 14L8.4957 12.9162C8.54418 12.8809 8.60395 12.8648 8.6636 12.8709L10.5009 13.063L11.2516 11.3753C11.2761 11.3202 11.3202 11.2762 11.3753 11.2518L13.063 10.5006L12.8712 8.66384C12.8649 8.60419 12.8809 8.5443 12.9162 8.4957L14 7.00006L12.9162 5.50442C12.8809 5.45582 12.8649 5.39593 12.8712 5.33628ZM10.5303 5.2739L5.712 10.0923C5.61694 10.1873 5.46295 10.1873 5.36789 10.0923L3.30177 8.02623C3.25602 7.9806 3.23036 7.91857 3.23036 7.85393C3.23036 7.78929 3.25602 7.72726 3.30177 7.68164L3.99048 6.99543C4.08542 6.90072 4.23918 6.90072 4.33412 6.99543L5.53995 8.19876L9.49751 4.2412C9.59257 4.14614 9.74656 4.14614 9.84162 4.2412L10.5303 4.92978C10.6254 5.02484 10.6254 5.17896 10.5303 5.2739Z"}
+                    %span=package.rating_code.capitalize
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.buyer_alerts")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_8", data: {type: "active_buyer_alerts"}}
+            - @items.each do |package|
+              %div
+                - if package.buyer_allerts < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.buyer_allerts ? t("common.unlimited") : package.buyer_allerts
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.sub_accounts")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_9", data: {type: "sub_accounts_limit"}}
+            - @items.each do |package|
+              %div
+                - if package.sub_accounts < 1
+                  %span.red.symbol ✕
+                - else
+                  = 100_500 == package.sub_accounts ? t("common.unlimited") : "#{package.sub_accounts} members"
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.company_performance")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_10", data: {type: "company_performance"}}
+            - @items.each do |package|
+              %div
+                - if package.performance.presence
+                  = package.performance
+                - else
+                  %span.red.symbol ✕
+          .pricing-table--item
+            %div
+              =t("common.pricing_page.industry_reports")
+              %app-tooltip{class: "js-tooltip", id: "app-tooltip_11", data: {type: "industry_reports"}}
+            - @items.each do |package|
+              %div
+                - if package.reports.presence
+                  = package.reports
+                - else
+                  %span.red.symbol ✕
+        - @categories.each do |category|
+          .pricing-table--title
+            %p=category.title
+          .pricing-table--item-wrapper
+            - category.service_items.active.each do |item|
+              .pricing-table--item
+                %div
+                  =item.title
+                - @items.each do |package|
+                  - service_item = package.offline_packages.dig(category.id.to_s, item.id.to_s)
+                  %div
+                    - if service_item.nil? || service_item['closed']
+                      %span.red.symbol ✕
+                    - elsif service_item['as_checked']
+                      %span.green.symbol ✔
+                    - else
+                      = service_item['description']
+        .pricing-table--item.buttons
+          %div
+          - @items.each do |package|
+            - if package.file.attached?
+              %div
+                .btn-block
+                  = link_to t("common.download"), rails_blob_path(package.file, disposition: 'preview'), class: 'btn btn__transparent download-btn', onclick: "socialTrack('Download#{package.rating_code.capitalize}','download_#{package.rating_code}')"
+    .contact-form
+      %h5=t("common.pricing_page.form_title") 
+      %p=t("common.pricing_page.form_subtitle")
+      = form_for Subscriber.new, url: subscribe_from_pricing_path do |f|
+        .form_row
+          = f.text_field :email, class: "txtinput", placeholder: "Enter Your contact number, WhatsApp, WeChat"
+          = f.submit t("common.send"), class: "btn"
+

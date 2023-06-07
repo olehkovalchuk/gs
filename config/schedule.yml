@@ -1,0 +1,28 @@
+defaults: &defaults
+  AdminUnblockUser:
+    class: "Admin::UnblockUser"
+    every: '1h'
+  # RatingJob:
+  #   class: "RatingJob"
+  #   every: '1h'
+  MessageJob:
+    class: "MessageJob"
+    every: '1d'
+  # InquiryJob:
+  #   class: "InquiryJob"
+  #   every: '5m'
+test:
+
+bamboo:
+
+testing:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults

@@ -1,0 +1,22 @@
+.row
+  .col-md-3
+    = state_block :active, initial_value: :false
+  .col-md-3
+    = select_block :code, :item_types, ng_required: true
+  .col-md-3
+    = select_block :usage_type, :usage_types  , ng_required: true
+  .col-md-3
+    = integer_block :usage_period, ng_required: true, ng_minlength: 1
+
+.row
+  .col-md-4
+    = select_block :currency, :currencies
+  .col-md-4
+    = integer_block :price, ng_required: true
+  .col-md-4
+    = integer_block :old_price
+.row
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :title , locale, ng_required: true
+      = input_for_lang_tabs :string, :usage_title , locale, ng_required: true

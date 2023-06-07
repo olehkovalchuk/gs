@@ -1,0 +1,18 @@
+.row
+  .col-md-3
+    = state_block :active_for_offer, initial_value: :true
+  .col-md-3
+    = state_block :active_for_po, initial_value: :true
+  .col-md-2
+    = state_block :need_sign, initial_value: :false
+  .col-md-2
+    = state_block :need_before_sign, initial_value: :false
+  .col-md-2
+    = select_block :template, :templates, ng_required: 'editedItem.need_sign'
+.row
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :title , locale, ng_required: true
+
+.row
+= checkboxes_block(:markets, 3, 3)

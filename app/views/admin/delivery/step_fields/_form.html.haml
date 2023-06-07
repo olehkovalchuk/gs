@@ -1,0 +1,7 @@
+.row
+  .col-md-4
+    = select_block :field_type, :field_types, ng_required: true
+.row
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :title , locale, ng_required: true

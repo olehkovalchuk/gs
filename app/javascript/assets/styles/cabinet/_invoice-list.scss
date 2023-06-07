@@ -1,0 +1,28 @@
+.invoice-list {
+  .id {
+    flex: 1;
+    max-width: 70px;
+  }
+  .user {
+    flex: 2;
+  }
+  .status {flex: 1;}
+  .update {flex: 1;}
+  .details {flex: 1;}
+  .delete {
+    flex: 1;
+    max-width: 50px;
+  }
+  .user-name {
+    align-items: center;
+  }
+  @media (max-width: 991.98px) {
+    .id {order: 2;}
+    .user {order: 1;}
+    .status {order: 3;}
+    .update {order: 4;}
+    .details {order: 5;}
+    .delete {order: 6;}
+  }
+ 
+}

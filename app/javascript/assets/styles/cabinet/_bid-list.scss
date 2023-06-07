@@ -1,0 +1,23 @@
+.bid-list {
+  .id {
+    flex: 1;
+    max-width: 70px;
+  }
+  .product {
+    flex: 2;
+  }
+  .partner {flex: 2;}
+  .price {flex: 1;}
+  .comments {flex: 2;}
+  .update {
+    flex: 1;
+  }
+  @media (max-width: 991.98px) {
+    .id {order: 2;}
+    .product {order: 1;}
+    .partner {order: 3;}
+    .price {order: 4;}
+    .comments {order: 5;}
+    .update {order: 6;}
+  }
+}

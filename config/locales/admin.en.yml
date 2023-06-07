@@ -1,0 +1,495 @@
+en:
+  admin:
+    log_out: Log out
+    item_select: Select
+    add_new: Add
+    cancel: Cancel
+    OK: OK
+    choose: Choose
+    filter:
+      title: Title
+      apply: Apply
+      reset: Reset
+      state:
+        -
+         - "All"
+         -
+        -
+         - "Yes"
+         - 1
+        -
+         - "No"
+         - 0
+    modules:
+      quick_offer_email: Email
+      quick_offer_logo: Logo
+      quick_offer_price: Price
+      quick_offer_country_title: Country
+      quick_offer_category_title: Category
+      quick_offer_company_title: Company
+      quick_offer_user_email: Email
+      source_header: Traffic source
+      source_name: Title
+      source_id: ID
+      company_offers_count_limit: Offers limit 
+      company_requests_count_limit: Requests limit 
+      company_received_inquries_limit: Received inquries 
+      company_replyies_to_inquries_limit: Inquiry replyies count 
+      company_active_chats_limit: Chat limit
+      company_show_infos_limit: Show contacts limit 
+      company_buyer_allerts_limit: Buyer alerts limit 
+      company_sub_accounts_limit: Sub account limit
+      company_sended_inquries_limit: Sended inquries limit 
+      company_top_offers_limit: Top offers limit 
+
+      company_offers_count_used: Offers used 
+      company_requests_count_used: Requests used 
+      company_received_inquries_used: Received used 
+      company_replyies_to_inquries_used: Inquiry replyies used 
+      company_active_chats_used: Chat used
+      company_show_infos_used: Show contacts used 
+      company_buyer_allerts_used: Buyer alerts used 
+      company_sub_accounts_used: Sub account used
+      company_sended_inquries_used: Sended inquries used 
+      company_top_offers_used: Top offers used 
+      
+      promotion_promo_type: Type 
+      promotion_product: Product
+      promotion_company_title: Company
+      service_item_title: Title 
+      service_item_service_category_title: Category
+      service_item_active: Active?
+      service_category_service_items: Items
+      service_category_title: Title 
+      service_category_active: Active?
+      package_price: Price 
+      package_closed: As Closed
+      package_as_checked: As Checked
+      package_default: Is default?
+      package_top_offers: Top offers count
+      package_sended_inquries: Sended inquries
+      package_description: Description
+      package_is_best: Is best offer?
+      package_map_access: Map access?
+      package_rating_code: Rating code
+      package_performance: Company performance (empty for 'X')
+      package_reports: Reports (empty for 'X')
+      package_currency: Currency 
+      package_offers_count: Offers Count 
+      package_requests_count: Request count 
+      package_received_inquries: Received inquries 
+      package_replyies_to_inquries: Replies to inquries
+      package_sub_accounts: Sub accounts 
+      package_buyer_allerts: Buyer allers 
+      package_show_infos: Show infos count 
+      package_active_chats: Chats count 
+      package_days: Days available
+
+      inquiry_header: Inquiry
+      inquiry_product: Product 
+      inquiry_created_at: Created 
+      inquiry_title: Title 
+      inquiry_phone: Phone
+      inquiry_post_request: Post request?
+      inquiry_sender_email: Sender email
+      inquiry_receiver_email: Receiver email
+      inquiry_message: Message 
+      inquiry_status: Status
+      feedback_sender_title: Sender
+      feedback_recipient_title: Recepinet
+      feedback_rating: Rating
+      feedback_text: Text
+      feedback_created_at: Created at
+      payment_transaction_header: Payment transaction
+      payment_transaction_company_id: Company
+      payment_transaction_item_id: Service
+
+      bid_created_at: Created at
+      created_at: Created at
+      company_created_at_lte: From
+      company_created_at_gte: To
+      company_created_at: Created
+      seo_page_marketplace_type: Type
+      proces_process_id: ID
+      proces_sender_company_title: Sender company
+      proces_sender_title: Sender
+      proces_recipient_company_title: Recepient company
+      proces_recipient_title: Recepient
+      proces_offer: Offer
+      proces_stage: Stage
+      proces_status: Status
+      proces_header: Business process
+      offer_header: Offer
+      offer_active: Active
+      offer_category_id: Category
+      offer_quantity: Quantity
+      offer_price_from: Price from
+      offer_price_to: Price to
+      offer_currency: Currency
+      offer_certificates: Certificates
+      offer_delivery_conditions: Incoterms
+      offer_documents: Documents
+      offer_payment_types: Payment types
+      offer_permissions_to: Permissions to
+      offer_description: Description
+      offer_origin: Origin
+      offer_packages: Packages
+      offer_delivery_port: Delivery port
+      offer_length_type: Length type
+      offer_length_to: Length to
+      offer_length_from: Length from
+      offer_weight_from: Weight from
+      offer_weight_to: Weight to
+      offer_weight_type: Weight type
+      offer_plant_number: Plant number
+      request_quantity: Quantity
+      request_price_from: Price from
+      request_price_to: Price to
+      request_currency: Currency
+      request_active: Active?
+      request_category_id: Category
+      request_certificates: Certificates
+      request_delivery_conditions: Incoterms
+      request_documents: Documents
+      cart_delivery_code: Incoterms
+      request_payment_types: Payment terms
+      request_permissions_to: Permissions to
+      request_origins: Origins
+      request_description: Description
+      request_header: Request
+      seo_page_link: Link
+      seo_page_page_type: Page type
+      seo_page_country_title: Country
+      seo_page_category_title: Category
+      seo_page_has_own_text: Has own text
+      seo_page_category_seo: Category
+      seo_page_country_code: Country
+      seo_page_header: Seo page
+      seo_page_meta_title: Meta title
+      seo_page_meta_description: Meta description
+      seo_page_text: Text
+      condition_steps: Steps
+      step_title: Title
+      step_position: Position
+      step_step_fields: Fileds
+      step_seller_step: Seller can approve?
+      step_buyer_step: Buyer can approve?
+      step_header: Delivery step
+      step_field_header: Delivery step fields
+      step_field_title: Title
+      step_field_field_type: Field type
+      request_category_title: Category
+      request_company_title: Company
+      request_price: Price
+      request_delivery: Delivery
+      request_created_at: Created at
+      offer_logo: Logo
+      offer_category_title: Category
+      offer_company_title: Company
+      offer_price: Price
+      offer_delivery: Delivery
+      offer_created_at: Created at
+      faq_title: Title
+      faq_category: Category
+      faq_active:  Active?
+      faq_text: Text
+      faq_category: Category
+      faq_header: Faq
+      item_title: Title
+      item_is_included: Is Included
+      item_header: Service items
+      contact_name: Name
+      contact_email: Email
+      contact_text: Text
+      contact_header: Contact form
+      contact_created_at: Created at
+      notification_sender_title: Sender
+      service_title: Title
+      service_usage_title: Usage title
+      service_price: Price
+      service_currency: Currency
+      service_active: Is active?
+      service_header: Services
+      service_code: Code
+      service_old_price: Old price
+      service_usage_type: Usage type
+      service_usage_period: Usage period
+      subscriber_email: Email
+      subscriber_created_at: Subscribe date
+      subscriber_header: Subscriber
+      notification_sender_company_title: Sender Company
+      notification_recipient_title: Recepient
+      notification_recipient_company_title: Recepient company
+      notification_comment: Comment
+      notification_action: Action
+      notification_created_at: Created at
+      notification_sender_company_id: Sender company
+      notification_receiver_company_id: Recepient company
+      payment_transaction_status: Status
+      payment_transaction_order: Order
+      payment_transaction_description: Description
+      payment_transaction_amount: Amount
+      payment_transaction_currency: Currency
+      payment_transaction_created_at: Created at
+      payment_transaction_company_title: Company
+      payment_transaction_company_user_title: User
+      invoice_status: Status
+      invoice_link: Link
+      invoice_comment: Comment
+      invoice_header: Invoices
+      invoice_company_title: Company
+      invoice_company_user_title: User
+      company_user_phone: Phone
+      company_user_created_at: Created
+      invoice_company_id: Company
+      invoice_created_at: Created at
+      email_template_header: Email Template
+      email_template_title: Subject
+      email_template_code: Code
+      email_template_text: Body
+      page_header: Page
+      page_title: Title
+      page_seo_name: Seo Name
+      page_meta_title: Meta Title
+      page_meta_description: Meta Description
+      page_text: Body
+      post_image: Main image
+      post_title: Title
+      post_seo_name: Seo Name
+      post_active: Active?
+      post_meta_title: Meta Title
+      post_meta_description: Meta Description
+      post_anons: Anons
+      post_text: Text
+      post_header: Post
+      region_header: Region
+      region_title: Title
+      region_code: Code
+      country_header: Country
+      country_title: Title
+      country_code: Code
+      country_region_title: Region
+      country_region_code: Region
+      port_title: Title
+      port_code: Code
+      port_region_title: Region
+      port_country_title: Country
+      port_active: Active?
+      port_header: Port
+      port_country_code: Country
+      port_latitude: Latitude
+      port_longitude: Longitude
+      port_address: Address
+      port_location: Set location
+      port_region_code: Region
+      bid_bidable_type: Type
+      bid_offer: Offer Link
+      bid_sender_title: Sender
+      bid_recipient_title: Recipient
+      bid_amount: Amount
+      bid_currency: Currency
+      bid_comment: Comment
+      bid_header: Bid
+      category_header: Category
+      category_title: Title
+      category_parent_title: Parent
+      category_active: Active?
+      category_offers_count: Offers count
+      category_requests_count: Requests count
+      category_icon: Icon
+      category_cls: CSS class
+      category_parent_id: Parent
+      category_image: Image
+      category_market: Market
+      package_header: Package
+      package_title: Title
+      package_active: Active?
+      condition_active: Active?
+      condition_code: Code
+      condition_safe_deal: For safe deal
+      condition_header: Delivery Condition
+      condition_need_seller_country: Need seller country
+      condition_need_seller_port: Need seller port
+      condition_need_buyer_country: Need buyer country
+      condition_need_buyer_port: Need buyer port
+      condition_need_sea_line: Need shipping line
+      payment_type_title: Title
+      payment_type_active: Active?
+      payment_type_header: Payment type
+      payment_type_has_prepay: Has prepay on PO
+      company_header: Company
+      company_role: Role
+      company_has_passport: Has attached passport
+      company_has_bill: Has attached bill
+      company_pasport_verified: Pasport verified
+      company_bill_verified: Bill verified
+      company_moderated: Moderated
+      company_bank_country: Bank account
+      company_bank: Bank
+      company_representative: Representative
+      company_total_emploees: Total emploees
+      company_year_establishment: Year Establishment
+      company_plant_number: Plant number
+      company_about: About
+      company_zip: Postal code
+      company_zip_address: Postal address
+      company_city: City
+
+      company_on_map: Present on map
+      company_title: Title
+      company_rating_code: Rating code
+      company_package_expiration: Package expiration
+      company_country_title: Country
+      company_offers_count: Offers count
+      company_requests_count: Request count
+      company_managers_count: Managers count
+      company_chats_count: Chats count
+      company_logo: Logo
+      company_user_avatar: Avatar
+      company_user_username: Username
+      company_user_company_title: Company
+      company_user_title: Position
+      company_user_header: Manager
+      company_user_email: Email
+      company_user_is_company_owner: Is company owner?
+      company_user_offers_count: Offers count
+      company_user_requests_count: Request count
+      company_user_managers_count: Managers count
+      company_user_chats_count: Chats count
+      certificate_header: Certificate
+      certificate_title: Title
+      certificate_active: Active?
+      certificate_logo: Logo
+      document_title: Title
+      document_active: Active
+      document_active_for_offer: Active in MP
+      document_active_for_po: Active in PO
+      document_need_sign: Needed sign
+      document_template: Pdf template name
+      document_need_before_sign: Needed before sign
+      document_header: Document
+      company_phone: Phone
+      company_country_code: Country
+      company_iban: Iban
+      company_swift: Swift
+      company_eori: EORI
+      company_account_number: Account Number
+      company_tic: TIC
+      company_blocked_until: Blocked until
+      company_vat: VAT
+      company_blocked: Bloked?
+      company_active: Active?
+      company_location: Location
+      company_latitude: Latitude
+      company_longitude: Longitude
+      company_address: Address to search
+      notification_header: Users notifications
+      notification_name: User name
+      notification_email: Email
+      notification_text: Message
+
+      conversation_sender_company_title: Sender company
+      conversation_sender_title: Sender
+      conversation_recipient_company_title: Recepient company
+      conversation_receiver_company_id: Recepient company
+      conversation_recipient_title: Recepient
+      conversation_header: Conversation
+      conversation_updated_at: Last message at
+      conversation_sender_company_id: Sender company
+      conversation_has_new_messages: Has new messages
+      sea_line_title: Title
+      sea_line_active: Active?
+      sea_line_header: Sea line
+      message_readed: Readed?
+      message_sender_company_title: Sender Company
+      message_sender_title: Sender
+      message_recipient_company_title: Recipient Company
+      message_recipient_title: Recipient
+      message_created_at: Createdat
+      message_text: Text
+      message_status: Status
+
+
+
+
+      relations: Relations
+      _actions:
+        show: Show
+        update: Edit
+        destroy: Destroy
+        reject: Reject
+        approve: Approve
+      menu_header: Menu
+      menu_title: Title
+      menu_icon: Icon
+      permission_title: Title
+      permission_header: Permission
+      permission_controller: Controller
+      permission_actions: Actions
+      permission_allowed: Allowed?
+      permission_roles: Roles
+      permission_users: Individual Users
+      permission_role_users: Role Users
+      role_title: Title
+      role_header: Role
+      role_description: Description
+      role_permissions: Permissions
+      role_users: Users
+      user_email: Email
+      user_name: Name
+      user_title: Position Title
+      user_signins_count: Sigins count
+      user_active: Active?
+      user_blocked: Blocked?
+      user_foto: Avatar
+      user_header: Admin User
+      user_individual_permissions: Individual Permissions
+      user_roles: Roles
+      user_last_name: Last Name
+      user_first_name: First Name
+      user_has_child_resource_scope: Has access to childs
+      user_has_root_resource_scope: Has ROOT access
+      user_blocked_until: Blocked until
+      user_avatar: Avatar
+      email_subject: Subject
+      email_code: Code
+      email_header: Admin Email Template
+      email_text: Text
+      log_request_type: Request type
+      log_execution_time: Execution time
+      log_created_at: Created at
+      log_status: Status
+      log_description: Description
+      log_component: Component
+      log_activity: Activity
+      log_http_format: Response Format
+      log_format: Method/Format
+      log_header: Logs
+      log_user_ip: User IP
+      log_user_token: Token
+      log_http_method: HTTP Method
+      log_user_login: User Login
+      version_created_at: Create At
+      version_item_type: Type
+      version_item_id: ID
+      version_whodunnit: User
+      version_event: Event
+      version_header: Versions
+      setting_code: Code
+      setting_value: Value
+      setting_header: Settings
+    app_title_admin: BeOne Admin
+    navigation: Navigation
+    uniq_toke_desc: Uniq token
+    title: BeOneAdmin
+    desc: Your technology partner
+    main_dashboard: Welcome!
+    default_module_header: Default module header
+    total_items: Total
+    login:
+      email: Email
+      password: Password
+      forgot_password: Forgot your password? Click <a href="%{url}">here</a> to restore
+      go_to_auth: Or authorize <a href="%{url}">here</a>
+      login: Sign in
+      restore: Restore password

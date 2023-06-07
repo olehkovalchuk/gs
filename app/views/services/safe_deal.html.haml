@@ -1,0 +1,124 @@
+-content_for :meta_title, 'Safe deal | Global Supplies' 
+-content_for :meta_description, "Safe deal | #{t("meta.global_static_description")}"
+%section.hero
+  .container
+    %div
+      %h1.big-title Safe deal
+      %p.hero--subtitle
+        A simple and affordable way to start working with new partners safely
+        = succeed "" do
+          %br/
+    = render partial: "form", locals: {event: 'SafeDeal', g_event: 'safe_deal'}
+%section.service
+  .container
+    .service--item
+      .service--icon.logistics
+        =image_tag "icon-box.svg"
+      %p Logistics service
+      .info-text
+        %ul
+          %li Consists of:
+          %li - Search of container for an optimal price;
+          %li - Booking of container;
+          %li - Verification of documents between the supplier and the buyer;
+          %li - Verification of documents between the supplier and the customs;
+          %li - Verification of documents between the supplier and the veterinary authority;
+          %li - Verification of documents between the buyer and the forwarding company;
+          %li - Verification of correctness of custom clearance by supplier.
+    .service--item
+      .service--icon.forwarding
+        =image_tag "icon-arrow.svg"
+      %p Forwarding service
+      .info-text
+        %p Checking the quality and conditions of shipment in accordance with the standards of Global Supplies
+    .service--item
+      .service--icon.secure-payment
+        =image_tag "icon-shield.svg"
+      %p Secure payment
+      .info-text
+        %p Preparation of a trilateral agreement. Guarantee of compliance with the terms of a trilateral agreement.
+    .service--item
+      .service--icon.secure-deal
+        =image_tag "icon-hands.svg"
+      %p Secure deal
+      .info-text
+        %p Service neutralizes all the existing risks.
+%section.banner
+  .container
+    .left
+      %ul
+        %li
+          %span.red >
+          Do you want to be sure in quality of the goods, correctness of the documents and the reliability of payment?
+        %li
+          %span.red >
+          Today a huge number of questionable companies publish their offers and RFQ at LinkedIn, Alibaba and other online resources.
+        %li
+          %span.red >
+          How many of them are actually ready to do business? Who is an unreliable partner that has bad intentions?
+        %li
+          %span.red >
+          In modern technological world no one is safe from becoming a victim of poor-quality goods, or even worse, to be deceived by scummers.
+    .right
+      .bg-shape
+      =image_tag "laptop.png"
+%section.instructions
+  .container
+    %h2.big-title It's easy
+    .instructions-list
+      .instructions-list--item
+        %strong 1
+        %p Order one of our services
+      .instructions-list--item
+        %strong 2
+        %p We will contact you and clarify all the details
+      .instructions-list--item
+        %strong 3
+        %p Pay a reasonable fee
+      .instructions-list--item
+        %strong 4
+        %p Get your service
+%section.compare
+  .container
+    %span.switcher
+      =image_tag "switcher-arrow.svg"
+      =image_tag "switcher-arrow.svg", class: "reverse"
+    .compare-list
+      .compare-list--item
+        .compare-list--title
+          Standard b2b platform
+        .compare-list--content
+          %ul
+            %li
+              %span.red >
+              Register
+            %li
+              %span.red >
+              Pay Your monthly fee
+            %li
+              %span.red >
+              No rating and trust system
+            %li
+              %span.red >
+              No advertisement on Google
+      .compare-list--item
+        .compare-list--title.good
+          Global Supplies
+        .compare-list--content
+          %ul
+            %li
+              %span.red >
+              Register
+            %li
+              %span.red >
+              Get only target leads
+            %li
+              %span.red >
+              Reliable and Verified partners
+            %li
+              %span.red >
+              Trusted system and Google promotion
+  %section.service-form-section
+    .bg-shape.one
+    .bg-shape.two
+    = render partial: "form", locals: {event: 'SafeDeal', g_event: 'safe_deal'}

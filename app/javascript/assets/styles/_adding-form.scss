@@ -1,0 +1,200 @@
+.adding-form {
+  width: 100%;
+  max-width: 920px;
+  margin: auto;
+  padding: 20px 0;
+  button.btn {width: 100%;}
+  &--title {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid $bg_grey;
+  }
+  .subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form-section {
+    padding-top: 30px;
+    border-top: 2px solid $bg_grey;
+  }
+  .form_row {
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+  .flex-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .price-block {
+    display: flex;
+    .txtinput {
+      flex: 1;
+    }
+    .select-with-input {
+      flex: 2;
+      margin-left: 15px;
+    }
+  }
+  .description-input {
+    display: block;
+    height: 110px;
+    resize: none;
+  }
+  .btn-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding: 20px 30px 0;
+    border-top: 2px solid $bg_grey;
+  }
+
+  &--offer {
+    .adding-form--title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px 15px;
+      p {
+        margin: 0;
+        font-size: 22px;
+        span {
+          color: $dark_grey;
+        }
+      }
+    }
+  }
+  .input_group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .input-number {
+      flex: 1;
+    }
+    .splitter {
+      margin: 0 15px;
+    }
+    .btn {
+      width: 60px;
+      margin-left: 15px;
+    }
+    .form-select {
+      &__small {
+        margin-left: 15px;
+        .vs {
+          &__dropdown-toggle {
+            width: 60px;
+            height: 40px;
+          }
+          &__search {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .add-photo {
+    padding-top: 30px;
+    border-top: 2px solid $bg_grey;
+    &--text-block {
+      padding: 0 30px;
+      h4 {margin-bottom: 10px;}
+      em {font-size: 12px;}
+      @media (max-width: 767.98px) {
+        padding: 0 15px;
+      }
+    }
+    &--btn-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding: 0 30px;
+      @media (max-width: 767.98px) {
+        justify-content: flex-start;
+        padding: 0 15px;
+      }
+      @media (max-width: 575.98px) {
+        justify-content: center;
+      }
+    }
+  }
+  @media (max-width: 767.98px) {
+    .form_row {
+      margin: 0;
+      padding: 0;
+    }
+    [class*="col-"] {
+      margin-bottom: 20px;
+    }
+    .price-block {
+      margin-top: 20px;
+    }
+    .input_group:first-child {
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .input-number {
+      .txtinput {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.add-photo-btn {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-image: url("~assets/img/gs-logo.svg"), $btn_gradient;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+    .text-block {
+      font-size: 12px;
+    }
+  }
+  &--icon {
+    svg {
+      width: 31px;
+      height: 27px;
+      fill: $white;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: $white;
+    font-size: 0;
+  }
+  @media (max-width: 767.98px) {
+    margin: 2.5px
+  }
+}

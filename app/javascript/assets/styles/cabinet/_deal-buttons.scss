@@ -1,0 +1,63 @@
+.deal-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 0;
+  border-bottom: 1px solid $bg_grey;
+}
+
+.deal-btn {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 287px;
+  height: 95px;
+  margin-right: 20px;
+  color: $black;
+  font-size: 14px;
+  background: $white;
+  box-shadow: 0px 4px 15px rgba(79, 85, 103, 0.1);
+  border-radius: 5px;
+  &:last-child {
+    margin: 0;
+  }
+  p {margin: 0;}
+  &--icon {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    margin-right: 20px;
+    border-right: 1px solid $bg_grey;
+    svg {
+      width: 41px;
+      fill: $primary;
+    }
+  }
+  &--text {
+    flex: 2;
+  }
+  .counter {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  &:hover {
+    background: $btn_gradient;
+    color: $white;
+    svg {
+      fill: $white;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    flex: none;
+    width: 48%;
+    max-width: none;
+    margin: 0 0 20px 0;
+  }
+  @media (max-width: 575.98px) {
+    width: 100%;
+  }
+}

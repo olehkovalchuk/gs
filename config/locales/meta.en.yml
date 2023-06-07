@@ -1,0 +1,30 @@
+en:
+  meta:
+    marketplace_title: B2B Online Trading Platform’s Map – Make Business with Ease on GlobalSupplies! 
+    marketplace_description: Find the most high-rated wholesale meat distributors with one click. Welcome to the Global Supplies’ trading map – the most comfortable guideline for B2B supplies deals online.
+    default_title: Global Supplies | The Most Productive B2B Wholesale Marketplace
+    default_description: Global Supplies |  The most convenient and dynamically developing b2b platform working worldwide | Join us to find wholesale suppliers or to trade your products on a business to business wholesale
+    faq_title: Have Any Question to Global Supplies Trading Platform? Check for Them in Our FAQ!
+    faq_description: If you have any question about us or our work principles, welcome to our FAQ page! Here, we gathered the most popular questions about user’s accounts, services and the marketplace itself.
+    pricing_title: Check for Global Supplies Price List to Be in Trend with Our Best Services
+    pricing_description: On the Global Supplies b2b platform, we provide full-circle of services to make your business growing fast. Look for prices for our Safe Deal or Verification service and order them to make a profit!
+    how_it_works_title: Visiting Global Supplies for the First Time? Read More About How It Works!
+    how_it_works_description: Do you want to know more about our b2b marketplace? Or have you any question about how it works? Let us share the main principles of working on our free b2b platform.
+    about_us_title: What are Global Supplies? We’ll Share Our Company History for Your Inspiration
+    about_us_description: Can you imagine there were times with no Global Supplies? Actually, we can not! Read more about how the best meat suppliers’ aggregator came to life. Hope, you’ll love our company history as much as we do!
+    verification_title: "Verification Service on Global Supplies: Be Verified, Enjoy Safety and Comfort with Us!"
+    verification_description: We provide verification for our meat distributors and buyers both. What does it mean? It’s simple! No scammers and dishonest vendors are allowed on Global Supplies. Our verified suppliers get all the best from our service.
+    safe_deal_description: Want to trade safely? Know all the pitfalls of the meat industry and want to avoid them? Try our Safe Deal! It includes secure payment procedure, forwarding and logistic services and even more. Register and find out all the profits you’ll get with it.
+    safe_deal_title: Stay Safe on Global Supplies! Take All The Advantages of Our Safe Deal Option
+    news_title: Get in Touch with The Latest Meat Industry News on Global Supplies!
+    news_description: Meat industry has a changing market. And tracking global meat news is necessary both for suppliers and for their customers. Meet the latest news of pork, poultry or beef industry on Global Supplies!
+    global_static_description: The most convenient and dynamically developing b2b platform working worldwide | Join us to find wholesale suppliers or to trade your products on a business to business wholesale
+    offer:
+      title: Buy %{title} wholesale on Global Supplies from %{country}
+      description: '%{title} | The most convenient and dynamically developing b2b platform working worldwide | Join us to find wholesale suppliers or to trade your products on a business to business wholesale'
+    request:
+      title: Sell %{title} wholesale on Global Supplies from %{country}
+      description: '%{title} | The most convenient and dynamically developing b2b platform working worldwide | Join us to find wholesale suppliers or to trade your products on a business to business wholesale'
+    category:
+      title: Buy %{title} wholesale on Global Supplies
+      description: '%{title} - The most convenient and dynamically developing b2b platform working worldwide | Join us to find wholesale suppliers or to trade your products on a business to business wholesale'

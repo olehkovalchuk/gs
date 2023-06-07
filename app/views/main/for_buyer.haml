@@ -1,0 +1,211 @@
+-content_for :meta_title, 'Benefits For buyers | Global Supplies' 
+-content_for :meta_description, "Benefits For buyers | #{t("meta.global_static_description")}"
+.benefits-page.for_buyer
+  %section.benefits-page--hero
+    .container
+      .row
+        .col-12
+          %h1.main-title=t("common.benefits_buyer.main_title")
+          %h2.main-subtitle=t("common.benefits_buyer.main_subtitle") 
+          %app-search-bar{id: "app-search-bar"}
+  %section.products-gallery
+    %h3.products-gallery--title=t("common.benefits_buyer.products_gallery_title")
+    %p.products-gallery--subtitle=t("common.benefits_buyer.products_gallery_subtitle")
+    .container
+      %app-seo-products-slider{id: "app-seo-products-slider"}
+      .btn-block
+        %a.btn{href: marketplace_path}=t("common.see_all_offers")
+  %section.video-block
+    .container
+      .row
+        .col-lg-6.col-md-12
+          .video-block--text
+            %h3=t("common.benefits_seller.video_block_title")
+            %p=t("common.benefits_seller.video_block_p_1")
+            %p=t("common.benefits_seller.video_block_p_2")
+            %p=t("common.benefits_seller.video_block_p_3")
+            %a.btn{href:"/Global_Supplies_B2B_information_platform.pdf", target:"_blank"}=t("common.benefits_seller.download_report")
+        .col-lg-6.col-md-12
+          .promo-video
+            %iframe{rel: 'nofollow',:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "400", :src => "https://www.youtube.com/embed/99to5Fxf9KQ", :width => "660"}
+  %section.features
+    %h3=t("common.benefits_buyer.features_title")
+    .container
+      .row
+        .col-md-6
+          .features--item
+            .img
+              =image_tag("benefits-icon_1.svg")
+            .text=t("common.benefits_seller.feature_1")
+        .col-md-6
+          .features--item
+            .img
+              =image_tag("benefits-icon_2.svg")
+            .text=t("common.benefits_seller.feature_2")
+        .col-md-6
+          .features--item
+            .img
+              =image_tag("benefits-icon_3.svg")
+            .text=t("common.benefits_seller.feature_3")
+        .col-md-6
+          .features--item
+            .img
+              =image_tag("benefits-icon_4.svg")
+            .text=t("common.benefits_seller.feature_4")
+  %section.pricing
+    %h3 FIND A FAVORABLE OPTION FOR YOUR COMPANY
+    .container
+      - @items.in_groups_of(3,false).each do |group|
+        .row
+          - group.each do |item|
+            .col-lg-4
+              .card.mb-5.mb-lg-0
+                .card-body
+                  %h5.card-title.text-muted.text-uppercase.text-center=item.title
+                  %h6.card-price.text-center
+                    ="#{item.price.to_i} #{item.currency}"
+                  %hr/
+                  %ul.fa-ul
+                    - item.items.each do |row|
+                      %li{class: row.is_included ? "" : "text-muted" }
+                        - if row.is_included
+                          %span.fa-li>
+                            %i.fas.fa-check
+                        - else
+                          %span.fa-li>
+                            %i.fas.fa-times
+                        = row.title
+                  = form_tag(transactions_path) do
+                    = hidden_field_tag :id, item.id
+                    %button.btn.btn-block.text-uppercase{type: :submit, value: t("common.get_membership"), onclick:"socialTrack('#{item.rating_code.capitalize}Member',0,{currency:'USD',value: #{item.price}}) ; clickLogin(event)"}=t("common.get_membership")
+  %section.special-price
+    %h3=t("common.benefits_seller.special_price_title")
+    .container
+      .row
+        .col-lg-6.col-md-12
+          .accordion
+            .accordion--item.js-acc-item.open
+              .accordion--item-heading.js-acc-heading=t("common.benefits_seller.acc_1_title")
+              .accordion--item-content
+                %p=t("common.benefits_seller.acc_1_p")
+            .accordion--item.js-acc-item
+              .accordion--item-heading.js-acc-heading=t("common.benefits_seller.acc_2_title")
+              .accordion--item-content
+                %p=t("common.benefits_seller.acc_2_p_1")
+                %p=t("common.benefits_seller.acc_2_p_2")
+                %p=t("common.benefits_seller.acc_2_p_3")
+            .accordion--item.js-acc-item
+              .accordion--item-heading.js-acc-heading=t("common.benefits_seller.acc_3_title")
+              .accordion--item-content
+                %p=t("common.benefits_seller.acc_3_p_1")
+                %p=t("common.benefits_seller.acc_3_p_2")
+        .col-lg-6.col-md-12.discount-block-wrapper
+          .discount-block
+            .img
+              =image_tag("icon-discount.svg")
+            %h3=t("common.benefits_seller.special_offer_title")
+            .timer-block
+              - if cookies[:timer].to_i < Time.current.to_i
+                %span Special offer has expired
+              - else
+                %span Offer ends in: 
+                .timer
+                  .timer--item
+                    %p.digits#days
+                    %span Days
+                  .timer--item
+                    %p.digits#hours
+                    %span Hours
+                  .timer--item
+                    %p.digits#minutes
+                    %span Minutes
+                  .timer--item
+                    %p.digits#seconds
+                    %span seconds
+            %p=t("common.benefits_seller.special_offer_p_1").html_safe
+            %p=t("common.benefits_seller.special_offer_p_2")
+            %p=t("common.benefits_seller.special_offer_p_3")
+            %p=t("common.benefits_seller.special_offer_p_4")
+
+            - if cookies[:timer].to_i < Time.current.to_i
+              %button.btn{:onclick => "showDiscount(event)"} Get a special price
+            - else
+              %button.btn{:onclick => "showSpecialPrice(event)"}=t("common.benefits_seller.get_discount")
+  %section.news
+    %h3 News
+    .container
+      .row
+        - Content::Post.active.limit(3).order(id: :desc).each do |item|
+          .col-4
+            .news--item{href: article_path(id: item.seo_name)}
+              .img
+                %a{href: article_path(id: item.seo_name)}
+                  %img{alt: item.title, src: item.image.attached? ? item.image.try(:service_url) : image_path("article-img.png")}/
+              .text
+                %h5=item.title
+                %p.date=item.created_at.strftime("%d %b %Y")
+                .preview
+                  %p=item.anons
+
+  %section.contact-us
+    .container
+      .contact-form
+        %h5=t("common.pricing_page.form_title") 
+        %p=t("common.pricing_page.form_subtitle")
+        = form_for Subscriber.new, url: subscribe_url do |f|
+          .form_row
+            = f.text_field :email, class: "txtinput", placeholder: "Enter Your contact number, WhatsApp, WeChat"
+            = f.submit t("common.send"), class: "btn"
+:javascript
+
+  let accItem = document.getElementsByClassName('js-acc-item');
+  let accHD = document.getElementsByClassName('js-acc-heading');
+  for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+    let item = this.parentNode;
+    for (i = 0; i < accItem.length; i++) {
+      accItem[i].classList.remove('open');
+    }
+    item.classList.add('open');
+  }
+
+  function countdown(endDate) {
+    let days, hours, minutes, seconds;
+  
+    endDate = new Date(endDate).getTime();
+  
+    
+  
+    setInterval(calculate, 1000);
+  
+    function calculate() {
+      let startDate = new Date().getTime();
+      
+      let timeRemaining = parseInt((endDate - startDate) / 1000);
+      if (timeRemaining >= 0) {
+        days = parseInt(timeRemaining / 86400);
+        timeRemaining = (timeRemaining % 86400);
+        
+        hours = parseInt(timeRemaining / 3600);
+        timeRemaining = (timeRemaining % 3600);
+        
+        minutes = parseInt(timeRemaining / 60);
+        timeRemaining = (timeRemaining % 60);
+        
+        seconds = parseInt(timeRemaining);
+        
+        document.getElementById("days").innerHTML = parseInt(days, 10);
+        document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+      } else {
+        return;
+      }
+    }
+  }
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    setTimeout(function(){ countdown(#{cookies[:timer].to_i}); }, 2000);
+  });
+   

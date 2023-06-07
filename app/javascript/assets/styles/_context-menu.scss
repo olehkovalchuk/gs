@@ -1,0 +1,41 @@
+.context-menu {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    .dot {
+      background: $primary;
+    }
+  }
+  &--item {
+    position: absolute;
+    top: 0;
+    //left: calc(100% + 10px);
+    right: 100%;
+    min-width: 100px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid $dark_grey;
+    background: $white;
+    z-index: 10;
+    a {
+      display: block;
+      color: $black;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+    background: $dark_grey;
+  }
+}

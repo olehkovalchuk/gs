@@ -1,0 +1,74 @@
+.bid-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 35px;
+  border-top: 2px solid $bg_grey;
+  .bid-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 2;
+    max-width: 755px;
+    & > * {width: 100%;}
+    .select-with-input {
+      max-width: 295px;
+    }
+    &--comment-input {
+      max-width: 295px;
+      margin: 0 15px;
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+    &--submit {
+      max-width: 126px;
+    }
+  }
+  @media (max-width: 1199.98px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .bid-form {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 767.98px) {
+    padding: 20px 0;
+    align-items: center;
+    &--title {
+      margin-bottom: 20px;
+    }
+    .bid-form {
+      flex-wrap: wrap;
+      justify-content: center;
+      .select-with-input {
+        width: 47%;
+        margin-right: 5px;
+      }
+      &--comment-input {
+        width: 47%;
+        margin-left: 5px;
+      }
+      .btn {
+        margin-top: 20px;
+      }
+    }
+  }
+  @media (max-width: 575.98px) {
+    padding: 20px 15px;
+    .bid-form {
+      flex-direction: column;
+      .select-with-input,
+      &--comment-input {
+        width: 100%;
+        max-width: 100%;
+        max-width: auto;
+        margin: 0;
+      }
+      &--comment-input {
+        margin-top: 20px;
+      }
+    }
+  }
+}

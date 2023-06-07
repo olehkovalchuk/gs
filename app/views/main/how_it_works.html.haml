@@ -1,0 +1,46 @@
+-content_for :meta_title, 'How it works | Global Supplies' 
+-content_for :meta_description, "How it works | #{t("meta.global_static_description")}"
+.how-it-works
+  %section.hero
+    .container
+      .hero--heading
+        %h1.big-title
+          =t("how_it_works.how")
+          = succeed t("how_it_works.it_works") do
+            %br/
+        %p.hero--subtitle=t("how_it_works.just_steps")
+        %a.btn{href:marketplace_path, onclick:"clickLogin(event, 'TryForFree', 'try_for_free')"}=t("common.try_it_for_free")
+      .promo-video
+        %iframe{rel: 'nofollow',:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "400", :src => "https://www.youtube.com/embed/yZfux65eWiY?autoplay=1&controls=0&rel=0", :width => "660"}
+  %section.instructions
+    .container
+      .instructions--item
+        .video-block
+          %iframe{rel: 'nofollow',:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "400", :src => "https://www.youtube.com/embed/xmfYM3_OBqY?controls=0", :width => "660"}
+        .text-block
+          %h3.red=t("how_it_works.step",step: 1)
+          %strong=t("how_it_works.step_1")
+          %p=t("how_it_works.step_1_desc").html_safe
+      .instructions--item
+        .video-block
+          %iframe{rel: 'nofollow',:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "400", :src => "https://www.youtube.com/embed/khqS0PuQgnA?controls=0", :width => "660"}
+        .text-block
+          %h3.red=t("how_it_works.step",step: 2)
+          %strong=t("how_it_works.step_2")
+          %p=t("how_it_works.step_2_desc").html_safe
+      .instructions--item
+        .video-block
+          %iframe{rel: 'nofollow',:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "400", :src => "https://www.youtube.com/embed/CJQVfrMXdBM?controls=0", :width => "660"}
+        .text-block
+          %h3.red=t("how_it_works.step",step: 3)
+          %strong=t("how_it_works.step_3")
+          %p=t("how_it_works.step_3_desc").html_safe
+  %section.service-form-section
+    .bg-shape.one
+    .bg-shape.two
+    .container
+      .register-block
+        %p=t("how_it_works.register")
+        %a.btn{href:marketplace_path, onclick:"clickLogin(event, 'TryForFree', 'try_for_free')"}=t("common.register")
+
+

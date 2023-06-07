@@ -1,0 +1,29 @@
+---
+:verbose: false
+:concurrency: 5
+:queues:
+  - mailers
+  - default
+  - active_storage_analysis
+  - active_storage_purge
+staging:
+  :concurrency: 5
+  :queues:
+    - mailers
+    - default
+    - active_storage_analysis
+    - active_storage_purge
+testing:
+  :concurrency: 5
+  :queues:
+    - mailers
+    - default
+    - active_storage_analysis
+    - active_storage_purge
+production:
+  :concurrency: 20
+  :queues:
+    - active_storage_analysis
+    - active_storage_purge
+    - mailers
+    - default

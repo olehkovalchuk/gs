@@ -1,0 +1,14 @@
+.mailing-block
+  .bg-block
+  .row
+    .col-lg-4.col-md-2.col-sm-2.col-3
+      .mailing-block--img
+        %img{alt: "", :src => image_path("icon-mail.svg")}/
+    .col-lg-4.col-md-5.col-sm-10
+      %strong=t("common.get_analisys")
+    .col-lg-4.col-md-5.col-sm-10.offset-sm-2.offset-md-0.offset-lg-0
+      = form_for Subscriber.new, url: subscribe_path, html: {class: "mailing-form" } do |f|
+        = f.email_field :email, class: "txtinput", placeholder: t("common.mail_enter")
+        = f.submit t("common.send"), class: "btn"
+        %input#subscribe.form-radio{:type => "checkbox"}/
+        %label.form-radio--label{:for => "subscribe"}=t("common.subscribe_to_news")

@@ -1,0 +1,10 @@
+.row
+  .col-md-2
+    = state_block :active, initial_value: :false
+  .col-md-8
+    = select_block :category, :categories, ng_required: true
+.row
+  .col-md-12
+    = lang_tabs_block_v2 do |locale|
+      = input_for_lang_tabs :string, :title , locale, ng_required: true
+      = rich_text_editor :text, locale, required: true, id: "text_#{locale}"

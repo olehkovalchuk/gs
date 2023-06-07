@@ -1,0 +1,37 @@
+.notifications-block {
+  border-top: 2px solid $bg_grey;
+  &--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 15px;
+    padding: 0 10px;
+  }
+  h4 {
+    color: $corp_grey;
+  }
+
+  .notifications-list {
+    &--item {
+      min-height: 60px;
+      padding: 0 10px;
+      border: none;
+    }
+  }
+  .read-more {
+    font-size: 12px;
+    color: $primary;
+    .arrow-icon {
+      margin-left: 5px;
+      transform: rotate(180deg);
+      &:before {
+        left: 5px;
+      }
+      &:before,
+      &:after {
+        height: 8px;
+        background: $primary;
+      }
+    }
+  }
+}

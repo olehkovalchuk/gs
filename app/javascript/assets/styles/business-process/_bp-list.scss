@@ -1,0 +1,30 @@
+.bp-list {
+  .id {
+    flex: 1;
+    max-width: 70px;
+  }
+  .product {
+    flex: 2;
+  }
+  .partner {flex: 2;}
+  .status {flex: 1;}
+  .price {flex: 1;}
+  .type {
+    flex: 1;
+    max-width: 80px;
+  }
+  .update {
+    flex: 1;
+    max-width: 70px;
+  }
+
+  @media (max-width: 991.98px) {
+    .id {order: 2;}
+    .product {order: 1;}
+    .partner {order: 3;}
+    .status {order: 4;}
+    .price {order: 5;}
+    .type {order: 6;}
+    .update {order: 7;}
+  }
+}

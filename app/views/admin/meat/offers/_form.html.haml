@@ -1,0 +1,61 @@
+.row
+  .col-md-12
+    = select_block :market, :markets, ng_required: true
+.row
+  .col-md-3
+    = state_block :active, initial_value: 'false'
+  .col-md-3
+    = string_block :plant_number, ng_required: false
+  .col-md-6
+    =select_block :category_id, :categories, ng_required: true
+.row
+  .col-md-3
+    =integer_block :quantity, ng_required: false
+  .col-md-3
+    =integer_block :price_from, ng_required: true
+  .col-md-3
+    =integer_block :price_to, ng_required: false
+  .col-md-3
+    =select_block :currency, :currencies, ng_required: true
+
+.row
+  .col-md-4
+    = string_block :weight_from, ng_required: false
+  .col-md-4
+    = string_block :weight_to, ng_required: false
+  .col-md-4
+    = select_block :weight_type, :weight_types, ng_required: false
+
+.row
+  .col-md-4
+    = string_block :length_from, ng_required: false
+  .col-md-4
+    = string_block :length_to, ng_required: false
+  .col-md-4
+    = select_block :length_type, :length_types, ng_required: false
+
+.row
+  .col-md-6
+    =tags_block :certificates,  {ng_required: false}, true
+  .col-md-6
+    =tags_block :delivery_conditions,  {ng_required: true}, true
+.row
+  .col-md-6
+    =tags_block :documents,  {ng_required: false}, true
+  .col-md-6
+    =tags_block :payment_types,  {ng_required: true}, true
+.row
+  .col-md-6
+    =tags_block :permissions_to,  {ng_required: false}, true
+  .col-md-6
+    =select_block :origin,  :origins , ng_required: true
+
+.row
+  .col-md-6
+    =tags_block :packages,  {ng_required: true}, true
+  .col-md-6
+    =select_block :delivery_port,  :delivery_ports , ng_required: false
+
+.row
+  .col-md-12
+    =text_block :description

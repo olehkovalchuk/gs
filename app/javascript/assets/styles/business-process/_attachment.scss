@@ -1,0 +1,103 @@
+.attachment-block {
+  margin-top: 60px;
+  padding: 5px 10px 30px;
+  border-top: 2px solid $bg_grey;
+  &--title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h4 {color: $corp_grey}
+  .attach-btn {
+    display: none;
+    input[type="file"] {
+      display: none;
+    }
+    .btn {
+      cursor: pointer;
+      svg {
+        width: 15px;
+        height: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .upload-block {
+      display: none;
+    }
+    .attach-btn {
+      display: block;
+    }
+  }
+}
+
+.attachment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  &--item {
+    margin: 10px 30px 10px 0;
+    padding: 4px 15px;
+    font-size: 12px;
+    color: $dark_grey;
+    cursor: pointer;
+    background: $white;
+    box-shadow: 0px 4px 15px rgba(79, 85, 103, 0.1);
+    border-radius: 5px;
+    transition: all .3s ease;
+    svg {
+      width: 13px;
+      height: 14px;
+      fill: $black;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: $primary;
+      box-shadow: 0px 8px 15px rgba(205, 21, 21, 0.25);
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+  .not-loaded {
+    input[type="file"] {
+      display: none;
+    }
+    .attachment--item {
+      color: $black;
+      border: 1px dashed $black;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.upload-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  margin: 20px 30px 0;
+  font-size: 14px;
+  color: $dark_grey;
+  border: 1px dashed $corp_grey;
+  background: $bg_grey url("~assets/img/upload-block_bg.svg") no-repeat 10px 50%;
+  border-radius: 5px;
+  p {margin: 0;}
+  input[type="file"] {
+    display: none;
+  }
+  label {
+    color: $primary;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
