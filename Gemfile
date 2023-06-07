@@ -44,9 +44,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-source "https://gems.beone.software" do
-  gem 'be_one_admin', '0.3.2'
-end
+# source "https://gems.beone.software" do
+#   gem 'be_one_admin', '0.3.2'
+# end
+gem 'be_one_admin', path: "components"
 # path "components" do
 #   gem 'be_one_admin', '0.2.66'
 # end
