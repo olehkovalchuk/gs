@@ -47,7 +47,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # source "https://gems.beone.software" do
 #   gem 'be_one_admin', '0.3.2'
 # end
-gem 'be_one_admin', path: "components"
+gem 'be_one_admin', git: "https://github.com/olehkovalchuk/be_one_admin.git"
+gem 'be_one_core', git: "https://github.com/olehkovalchuk/be_one_core.git"
+
+# gem 'be_one_admin', path: "components"
 # path "components" do
 #   gem 'be_one_admin', '0.2.66'
 # end
