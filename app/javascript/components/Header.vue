@@ -28,13 +28,6 @@
                       a.header-nav-submenu--link(:href="marketLink(k)") {{t}}
                 li.header-nav--item(:class="{ active: 'marketplace' == activeTab }" v-else)
                   a.header-nav--link(href="/marketplace") {{translate("common.marketplace")}}
-                li.header-nav--item(:class="{ active: 'services' == activeTab }")
-                  a.header-nav--link(href="#")
-                    | {{translate("common.services")}}
-                    span.arrow-icon
-                  ul.header-nav-submenu
-                    li.header-nav-submenu--item(v-for="(t,k) in translate('common.services_list')")
-                      a.header-nav-submenu--link(:href="'/services/' + k ") {{t}}
                 li.header-nav--item(:class="{ active: 'benefits' == activeTab }")
                   a.header-nav--link(href="#")
                     | {{translate("common.benefits")}}
@@ -48,8 +41,6 @@
                   a.header-nav--link(href="/how_it_works") {{translate("common.how_it_works")}}
                 li.header-nav--item(v-if="!user.user_name || !show_map" :class="{ active: 'articles' == activeTab }")
                   a.header-nav--link(href="/articles") {{translate("common.news")}}
-                li.header-nav--item(:class="{ active: 'pricing' == activeTab }")
-                  a.header-nav--link(href="/pricing") {{translate("common.pricing")}}
                 li.header-nav--item(:class="{ active: 'faq' == activeTab }")
                   a.header-nav--link(href="/faq") {{translate("common.faq")}}
             a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="show_map && !user.user_name") {{translate("common.login")}}
