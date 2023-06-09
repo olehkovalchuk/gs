@@ -35,8 +35,8 @@ local:
 
 google:
   service: GCS
-  project: gs-pictures
+  project: globsupplies
   credentials: <%= Rails.root.join("config/google.json") %>
-  bucket: global_supplies
+  bucket: globsupplies
   # object_defaults:
   #   cache-control: "public, max-age=84600"
