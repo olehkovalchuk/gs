@@ -2,7 +2,7 @@ class CreateChatMessage < ActiveRecord::Migration[6.0]
 
   def change
 
-    create_table :chat_messages do |t|
+    create_table :chat_messages, if_not_exists: true do |t|
 
       t.integer :sender_id, null: false
       t.integer :recipient_id, null: false
