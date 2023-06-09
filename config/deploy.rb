@@ -3,7 +3,7 @@ lock "~> 3.11.0"
 set :application, "gs"
 # set :repo_url, "ssh://git@git.beone.software:7999/gs/platform.git"
 set :repo_url, "git@github.com:olehkovalchuk/gs.git"
-set :deploy_to, "/var/www/#{fetch(:stage)}/#{fetch(:application)}"
+set :deploy_to, "/var/www/gs_v2/#{fetch(:stage)}/#{fetch(:application)}"
 set :deploy_via, :remote_cache
 set :branch, ENV['BRANCH'] || proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :keep_releases, 10
