@@ -72,7 +72,7 @@ group :development do
   gem 'capistrano-sidekiq', require: false
   gem 'capistrano-nvm', require: false
   gem 'capistrano-webpacker-precompile', require: false
-
+  gem 'annotate'
 end
 
 gem "sidekiq"

@@ -1,4 +1,16 @@
-
+# == Schema Information
+#
+# Table name: meat_promotions
+#
+#  id              :bigint           not null, primary key
+#  promo_type      :string           not null
+#  promotable_type :string           not null
+#  promotable_id   :integer          not null
+#  company_id      :integer          not null
+#  company_user_id :integer          not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 module Meat
   class Promotion  < ApplicationRecord
     belongs_to :promotable, polymorphic: true

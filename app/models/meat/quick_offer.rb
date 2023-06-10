@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: meat_quick_offers
+#
+#  id           :bigint           not null, primary key
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  email        :string           not null
+#  price        :float            not null
+#  country_code :string           not null
+#  category_id  :integer          not null
+#  user_id      :integer          not null
+#  company_id   :integer          not null
+#
 module Meat
   class QuickOffer  < ApplicationRecord
     belongs_to :company, foreign_key: :company_id, class_name: '::Meat::Company'

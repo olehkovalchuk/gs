@@ -1,4 +1,21 @@
-
+# == Schema Information
+#
+# Table name: offer_services
+#
+#  id           :bigint           not null, primary key
+#  title        :jsonb            not null
+#  code         :string           not null
+#  price        :float            not null
+#  old_price    :float
+#  usage_period :integer
+#  usage_type   :string
+#  usage_title  :jsonb            not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  active       :boolean          default(TRUE)
+#  deleted      :boolean          default(FALSE)
+#  currency     :string           default("USD"), not null
+#
 module Order
   class Service  < ApplicationRecord
     self.table_name = "offer_services"

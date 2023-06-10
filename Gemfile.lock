@@ -125,6 +125,9 @@ GEM
       railties (>= 3.1)
     angular-ui-bootstrap-rails (2.4.0)
     angularjs-rails (1.6.8)
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
+      rake (>= 10.4, < 14.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -553,6 +556,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_otp
+  annotate
   be_one_admin!
   be_one_core!
   bootsnap (>= 1.4.2)

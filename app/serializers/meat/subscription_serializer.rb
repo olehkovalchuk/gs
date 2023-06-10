@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: meat_subscriptions
+#
+#  id              :bigint           not null, primary key
+#  company_id      :integer          not null
+#  company_user_id :integer          not null
+#  category_ids    :integer          default([]), not null, is an Array
+#  type            :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 module Meat
   module SubscriptionSerializer
     class List < BeOneAdmin::Serializer

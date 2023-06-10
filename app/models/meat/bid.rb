@@ -1,4 +1,21 @@
-
+# == Schema Information
+#
+# Table name: meat_bids
+#
+#  id                        :bigint           not null, primary key
+#  currency                  :string           not null
+#  amount                    :float            not null
+#  comment                   :string
+#  bidable_type              :string           not null
+#  bidable_id                :integer          not null
+#  sender_company_id         :integer          not null
+#  sender_company_user_id    :integer          not null
+#  recipient_company_id      :integer          not null
+#  recipient_company_user_id :integer          not null
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  active                    :boolean          default(TRUE)
+#
 module Meat
   class Bid  < ApplicationRecord
     belongs_to :sender, class_name: "::Meat::CompanyUser", foreign_key: :sender_company_user_id

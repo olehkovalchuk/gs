@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: chat_notifications
+#
+#  id                        :bigint           not null, primary key
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  sender_company_id         :integer          not null
+#  sender_company_user_id    :integer          not null
+#  recipient_company_id      :integer          not null
+#  recipient_company_user_id :integer          not null
+#  comment                   :string           not null
+#  action                    :string           not null
+#  notificable_type          :string           not null
+#  notificable_id            :integer          not null
+#  params                    :jsonb            not null
+#  item_type                 :string
+#  read                      :boolean          default(FALSE), not null
+#
 module Chat
   class NotificationSerializer
     class List < ActiveModel::Serializer

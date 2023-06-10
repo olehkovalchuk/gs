@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: chat_messages
+#
+#  id                   :bigint           not null, primary key
+#  sender_id            :integer          not null
+#  recipient_id         :integer          not null
+#  conversation_id      :integer          not null
+#  text                 :text             not null
+#  readed               :boolean          default(FALSE), not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  sender_company_id    :integer
+#  recipient_company_id :integer
+#  status               :string           default("sent"), not null
+#
 module Chat
   class MessageSerializer
     class List < BeOneAdmin::Serializer

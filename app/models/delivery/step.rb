@@ -1,4 +1,17 @@
-
+# == Schema Information
+#
+# Table name: delivery_steps
+#
+#  id              :bigint           not null, primary key
+#  title           :jsonb            not null
+#  delivery_code   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  position        :integer          default(1), not null
+#  seller_step     :boolean
+#  buyer_step      :boolean
+#  required_fields :jsonb            not null
+#
 module Delivery
   class Step  < ApplicationRecord
     multilang :title

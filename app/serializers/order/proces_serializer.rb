@@ -1,3 +1,50 @@
+# == Schema Information
+#
+# Table name: order_proceses
+#
+#  id                               :bigint           not null, primary key
+#  processable_type                 :string           not null
+#  processable_id                   :integer          not null
+#  sender_company_id                :integer          not null
+#  sender_company_user_id           :integer          not null
+#  recipient_company_id             :integer          not null
+#  recipient_company_user_id        :integer          not null
+#  created_at                       :datetime         not null
+#  updated_at                       :datetime         not null
+#  process_id                       :string           not null
+#  payment_type_id                  :integer
+#  pre_pay                          :float
+#  post_pay                         :float
+#  origin                           :string(2)        not null
+#  title                            :string           not null
+#  quantity                         :integer          not null
+#  month_of_production              :integer
+#  price                            :integer          not null
+#  currency                         :string(3)        not null
+#  documents                        :integer          default([]), not null, is an Array
+#  comment                          :text
+#  delivery_code                    :string
+#  shiping_line                     :string
+#  destination_port                 :string
+#  stage                            :string           not null
+#  status                           :string           not null
+#  po_signed_by_seller              :boolean          default(FALSE)
+#  po_signed_by_buyer               :boolean          default(FALSE)
+#  po_confirmed_by_seller           :boolean          default(FALSE)
+#  po_confirmed_by_buyer            :boolean          default(FALSE)
+#  own_po                           :boolean          default(FALSE)
+#  packing                          :integer
+#  seller_main_contact_person       :jsonb            not null
+#  seller_additional_contact_person :jsonb            not null
+#  buyer_main_contact_person        :jsonb            not null
+#  buyer_additional_contact_person  :jsonb            not null
+#  buyer_company_deails             :jsonb            not null
+#  seller_company_deails            :jsonb            not null
+#  is_safe                          :boolean
+#  approved_for_safe                :boolean
+#  uploaded_by_buyer                :boolean
+#  uploaded_by_seller               :boolean
+#
 module Order
   module ProcesSerializer
     class List < BeOneAdmin::Serializer

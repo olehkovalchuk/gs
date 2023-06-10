@@ -1,4 +1,13 @@
-
+# == Schema Information
+#
+# Table name: delivery_step_fields
+#
+#  id         :bigint           not null, primary key
+#  title      :jsonb            not null
+#  field_type :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 module Delivery
   class StepField  < ApplicationRecord
     multilang :title
