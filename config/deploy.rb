@@ -15,7 +15,7 @@ set :ssh_options, {
   #forward_agent: true,
   user: fetch(:user)
 }
-set :linked_files, ["config/secrets.yml"]
+set :linked_files, %w[config/secrets.yml config/google.json]
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/storage}
 
 set :format, :pretty
