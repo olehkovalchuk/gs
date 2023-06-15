@@ -34,7 +34,7 @@ after 'puma:restart', "sidekiq:restart"
 
 before 'deploy:compile_assets', 'deploy:assets:install_webpack'
 
-after 'puma:restart', 'deploy:fb_feed'
+after 'puma:restart', 'deploy:symlink_creds', 'deploy:fb_feed'
 
 # before "deploy:assets:precompile", "deploy:yarn_install"
 
@@ -59,6 +59,10 @@ namespace :deploy do
         end
       end
     end
+  end
+  desc "Symlink google credentials"
+  task :symlink_creds do
+    run "ln -s #{shared_path}/config/google.json #{latest_release}/config/google.json"
   end
 end
 
