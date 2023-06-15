@@ -34,7 +34,7 @@ after 'puma:restart', "sidekiq:restart"
 
 before 'deploy:compile_assets', 'deploy:assets:install_webpack'
 
-after 'puma:restart', 'symlink:linked_files', 'deploy:fb_feed'
+after 'puma:restart', 'deploy:symlink:linked_files', 'deploy:fb_feed'
 
 # before "deploy:assets:precompile", "deploy:yarn_install"
 
