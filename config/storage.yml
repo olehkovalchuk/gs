@@ -37,7 +37,6 @@ google:
   service: GCS
   project: globsupplies
   credentials: <%= Rails.root.join("config/google.json") %>
-  # credentials: <%= Rails.root.join("../../shared/config/google.json") %>
   bucket: globsupplies
   # object_defaults:
   #   cache-control: "public, max-age=84600"

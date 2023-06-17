@@ -1,5 +1,6 @@
 REDIS_URL = "redis://#{Rails.application.secrets[:redis][:host]}:#{Rails.application.secrets[:redis][:port]}/0"
-SIDEKIQ_NAMESPACE     = "be_one-global-supplies-#{Rails.env}"
+# SIDEKIQ_NAMESPACE     = "be_one-global-supplies-#{Rails.env}"
+SIDEKIQ_NAMESPACE     = "global-supplies-#{Rails.env}"
 SIDEKIQ_CLIENT_CONFIG = { url: REDIS_URL, namespace: SIDEKIQ_NAMESPACE, size: 1 }
 SIDEKIQ_SERVER_CONFIG = { url: REDIS_URL, namespace: SIDEKIQ_NAMESPACE, size: 60 }
 

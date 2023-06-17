@@ -60,10 +60,6 @@ namespace :deploy do
       end
     end
   end
-  # desc "Symlink google credentials"
-  # task :symlink_creds do
-  #   run "ln -s #{shared_path}/config/google.json #{latest_release}/config/google.json"
-  # end
 end
 
 
