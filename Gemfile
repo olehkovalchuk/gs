@@ -73,6 +73,7 @@ group :development do
   gem 'capistrano-nvm', require: false
   gem 'capistrano-webpacker-precompile', require: false
   gem 'annotate'
+  gem "letter_opener_web"
 end
 
 gem "sidekiq"

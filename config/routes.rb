@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   mount Sidekiq::Web, at: "/jobs"
   mount BeOneAdmin::Engine, at: "/#{BeOneAdmin.config.route}", as: :admin_root
   mount ActionCable.server => '/cable'
-
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
 
   get :"benefits/for_buyer", to: "main#for_buyer"
   get :"benefits/for_seller", to: "main#for_seller"

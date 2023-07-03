@@ -197,10 +197,6 @@ ActiveRecord::Schema.define(version: 2021_02_14_140752) do
     t.string "status", default: "created", null: false
     t.string "inquiry_email"
     t.boolean "income", default: true
-    t.string "phone"
-    t.boolean "post_request", default: false
-    t.string "country_code", limit: 2
-    t.string "phone_number"
   end
 
   create_table "chat_messages", force: :cascade do |t|
@@ -229,7 +225,6 @@ ActiveRecord::Schema.define(version: 2021_02_14_140752) do
     t.integer "notificable_id", null: false
     t.jsonb "params", default: {}, null: false
     t.string "item_type"
-    t.boolean "read", default: false, null: false
   end
 
   create_table "content_email_templates", force: :cascade do |t|
@@ -323,7 +318,7 @@ ActiveRecord::Schema.define(version: 2021_02_14_140752) do
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "markets", default: ["meat", "vegetables", "fruits"], null: false, array: true
+    t.string "markets", default: ["meat"], null: false, array: true
     t.index ["active"], name: "index_delivery_packages_on_active"
   end
 
@@ -466,7 +461,7 @@ ActiveRecord::Schema.define(version: 2021_02_14_140752) do
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "markets", default: ["meat", "vegetables", "fruits"], null: false, array: true
+    t.string "markets", default: ["meat"], null: false, array: true
     t.index ["active"], name: "index_meat_certificates_on_active"
   end
 
@@ -552,8 +547,8 @@ ActiveRecord::Schema.define(version: 2021_02_14_140752) do
     t.integer "sended_inquries_used", default: 0
     t.integer "top_offers_limit", default: 0, null: false
     t.integer "top_offers_used", default: 0
-    t.date "package_expiration", default: "2021-01-31", null: false
-    t.string "markets", default: ["meat", "vegetables", "fruits"], null: false, array: true
+    t.date "package_expiration", default: "2023-06-30", null: false
+    t.string "markets", default: ["meat"], null: false, array: true
     t.index ["seo_name"], name: "index_meat_companies_on_seo_name"
   end
 
@@ -616,7 +611,7 @@ ActiveRecord::Schema.define(version: 2021_02_14_140752) do
     t.boolean "need_sign", default: false
     t.boolean "need_before_sign"
     t.string "template"
-    t.string "markets", default: ["meat", "vegetables", "fruits"], null: false, array: true
+    t.string "markets", default: ["meat"], null: false, array: true
     t.index ["active"], name: "index_meat_documents_on_active"
   end
 

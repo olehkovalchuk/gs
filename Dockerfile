@@ -1,13 +1,26 @@
+# syntax=docker/dockerfile:1
 FROM ruby:2.6.3
+ENV BUNDLER_VERSION=1.17.2
 
-RUN apt-get update && apt-get -y install build-essential nodejs postgresql postgresql-contrib
-
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update -qq && apt-get install -qq --no-install-recommends \
+    nodejs \
+    yarn \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y nodejs
-RUN apt-get update && apt-get install -y yarn
+ENV NODE_VERSION=14.5.0
+
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+ENV NVM_DIR=/root/.nvm
+RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
+RUN node -v
+RUN npm -v
 
 ENV BUNDLE_PATH=/bundle \
     BUNDLE_BIN=/bundle/bin \
@@ -16,20 +29,22 @@ ENV PATH="${BUNDLE_BIN}:${PATH}"
 
 ENV NODE_PATH=/node_modules
 
-RUN mkdir -p /app
-ADD package.json /app/
+
 WORKDIR /app
-RUN yarn install
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 
+RUN bundle check || bundle install --binstubs="$BUNDLE_BIN"
 
-COPY . .
-RUN rm -f ./Gemfile.lock
+COPY package.json /app/package.json
+RUN yarn install --check-files
 
-COPY ./docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
+COPY . /app/
+COPY docker-entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/docker-entrypoint.sh
 
-
-LABEL maintainer="Alexander Chernov <boss@beone.software>"
+ENTRYPOINT ["docker-entrypoint.sh"]
 EXPOSE 3000
-CMD puma -C config/puma.rb
+
+# Configure the main process to run when running the image
+CMD ["rails", "server", "-b", "0.0.0.0"]

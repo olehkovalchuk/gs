@@ -68,4 +68,7 @@ Rails.application.configure do
   config.hosts << "5f263562.ngrok.io"
   config.exceptions_app = self.routes
 
+  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.perform_deliveries = true
+
 end

@@ -49,3 +49,5 @@ yarn-debug.log*
 
 config/google.json
 
+.DS_Store
+
