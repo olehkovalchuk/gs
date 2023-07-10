@@ -47,7 +47,7 @@
 #  outgoing_offer_views       :integer          default(0)
 #  outgoing_safe_deals_count  :integer          default(0)
 #  outgoing_uniq_offer_views  :integer          default(0)
-#  package_expiration         :date             default(Fri, 30 Jun 2023), not null
+#  package_expiration         :date             default(Mon, 31 Jul 2023), not null
 #  pasport_verified           :boolean          default(FALSE)
 #  phone                      :string
 #  phone_number               :string

@@ -16,12 +16,9 @@
     .limits(v-if="user.company")
       .row
         .col-xl-4
-          h3 Account limits available
+          h3 Account communication and publication statistics
           CompanyName(:company="user.company")
-          .info-badge Tariff ends on 
-            strong {{user.company.package_expiration}}
         .col-8
-          h3 Services
           .limits-list
             .limits-list--item(
               v-for="item in user.company.limits"
@@ -32,7 +29,6 @@
                 .loading(:style="{ width: item.used / item.max * 100 + '%' }")
                 span 
                   strong {{item.used}}
-                  |/{{item.max}}
               .info-icon(v-tooltip.top="translate(item.tooltip)")
               .alert-block
                 .attention_tooltip(
@@ -45,8 +41,6 @@
                   v-show="item.max - item.used <= 0"
                 )
                   img(src="@/assets/img/icon-alert.svg" alt=".")
-      .btn-block
-        a.btn(href="/pricing" @click="submit()") Get more limits
     ActivityChart   
 </template>
 

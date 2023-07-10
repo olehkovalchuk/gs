@@ -47,7 +47,7 @@
 #  outgoing_offer_views       :integer          default(0)
 #  outgoing_safe_deals_count  :integer          default(0)
 #  outgoing_uniq_offer_views  :integer          default(0)
-#  package_expiration         :date             default(Fri, 30 Jun 2023), not null
+#  package_expiration         :date             default(Mon, 31 Jul 2023), not null
 #  pasport_verified           :boolean          default(FALSE)
 #  phone                      :string
 #  phone_number               :string
@@ -165,11 +165,10 @@ module Meat
         {title:  "Outcoming inquiries", tooltip: "common.pricing_tooltip.outcoming_inquiries", used: object.sended_inquries_used, max: object.sended_inquries_limit},
         {title:  "Chat quantity", tooltip: "common.pricing_tooltip.chat_quantity", used: object.active_chats_used, max: object.active_chats_limit},
         {title:  "Show contact info", tooltip: "common.pricing_tooltip.show_contact_info", used: object.show_infos_used, max: object.show_infos_limit},
-        {title:  "Promoted offers", tooltip: "common.pricing_tooltip.promoted_offers", used: object.top_offers_used, max: object.top_offers_limit},
-        {title:  "Active buyer alerts", tooltip: "common.pricing_tooltip.active_buyer_alerts", used: object.buyer_allerts_used, max: object.buyer_allerts_limit},
-        {title:  "Sub accounts limit", tooltip: "common.pricing_tooltip.sub_accounts_limit", used: object.sub_accounts_used, max: object.sub_accounts_limit},
-        {title:  "Replay to inquiries", tooltip: "common.pricing_tooltip.reply_to_inquiries", used: object.replyies_to_inquries_used, max: object.replyies_to_inquries_limit},
-
+        # {title:  "Promoted offers", tooltip: "common.pricing_tooltip.promoted_offers", used: object.top_offers_used, max: object.top_offers_limit},
+        # {title:  "Active buyer alerts", tooltip: "common.pricing_tooltip.active_buyer_alerts", used: object.buyer_allerts_used, max: object.buyer_allerts_limit},
+        # {title:  "Sub accounts limit", tooltip: "common.pricing_tooltip.sub_accounts_limit", used: object.sub_accounts_used, max: object.sub_accounts_limit},
+        # {title:  "Replay to inquiries", tooltip: "common.pricing_tooltip.reply_to_inquiries", used: object.replyies_to_inquries_used, max: object.replyies_to_inquries_limit},
         ]
       end
     end

@@ -8,6 +8,7 @@
 #  item_type                 :string
 #  notificable_type          :string           not null
 #  params                    :jsonb            not null
+#  read                      :boolean          default(FALSE), not null
 #  created_at                :datetime         not null
 #  updated_at                :datetime         not null
 #  notificable_id            :integer          not null

@@ -85,12 +85,12 @@ en:
     price_package: Choose package
     create_password: Create password
     pricing_tooltip:
-      show_infos: The ratio of the current to maximum quantity of access to company contacts on our marketplace due to your membership
-      posted_offers: The ratio of the current to maximum quantity of posted offers on our marketplace due to your membership
-      posted_requests: The ratio of the current to the maximum quantity of posted requests on our marketplace due to your membership”
-      incoming_inquiries: The ratio of how many incoming inquiries from buyers  You can get to the maximum quantity due to your membership 
-      outcoming_inquiries: The ratio of your used outcoming inquiries to maximum ones
-      chat_quantity: Maximum quantity of unique chats on our marketplace 
+      show_infos: The number of contact info you have get on this marketplaces
+      posted_offers: The number of offers you have posted on this marketplace
+      posted_requests: The number of requests you have posted on this marketplace
+      incoming_inquiries: The number of inquiries you have received on this marketplace
+      outcoming_inquiries: The number of inquiries you have sent on this marketplace
+      chat_quantity: The number of unique chats you have on this marketplace
       access_to_trading_map: Check visually all verified companies on interactive meat trading map
       show_contact_info: The quantity of how many contact details You can see
       promoted_offers: Quantity of your promoted to TOP positions offers 

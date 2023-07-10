@@ -3,10 +3,14 @@
 # Table name: chat_inquiries
 #
 #  id                        :bigint           not null, primary key
+#  country_code              :string(2)
 #  income                    :boolean          default(TRUE)
 #  inquirieable_type         :string           not null
 #  inquiry_email             :string
 #  message                   :text             not null
+#  phone                     :string
+#  phone_number              :string
+#  post_request              :boolean          default(FALSE)
 #  receiver_email            :string           not null
 #  sender_email              :string           not null
 #  status                    :string           default("created"), not null
