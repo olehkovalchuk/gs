@@ -4,10 +4,6 @@
       a(:href="marketLink(k)") {{t}} {{translate("common.marketplace")}} 
     li.nav-menu--item(v-else)
       a(href="/marketplace") {{translate("common.marketplace")}} 
-    li.nav-menu--item(v-for="(t,k) in translate('common.services_list')")
-      a(:href="'/services/' + k ") {{t}}
-    li.nav-menu--item
-      a(href="/pricing") {{translate("common.pricing")}}
     li.nav-menu--item(v-for="(t,k) in translate('common.benefits_list')")
       a(:href="'/benefits/' + k ") {{t}}
     li.nav-menu--item

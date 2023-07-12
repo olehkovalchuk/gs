@@ -171,7 +171,6 @@ export default {
         {title: this.translate('common.add_offer'), url: 'add-new-offer'},
         {title: this.translate('common.add_request'), url: 'add-new-request'},
         {title: this.translate('common.faq'), url: 'faq'},
-        {title: this.translate('common.pricing'), url: 'pricing'},
         {title: this.translate('common.logout'), url: 'logout', logout: true},
       ]
     }
