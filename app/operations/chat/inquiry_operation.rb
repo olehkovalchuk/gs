@@ -67,6 +67,8 @@ module Chat
           phone_number: parent_inqury.sender.phone_number,
           country_code: parent_inqury.sender.country_code
         ).run
+
+        ::Chat::InquiryOperation::Send.new(id: inqury.id).perform
         
         RequestStore.store[:kibana_data].merge!(
           current_email: parent_inqury.receiver_email,

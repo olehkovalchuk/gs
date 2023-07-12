@@ -247,6 +247,8 @@ module Meat
           post_request: form.post_request,
         ).run
 
+        ::Chat::InquiryOperation::Send.new(id: inqury.id).perform
+
         kibana_data = @model.presenter.kibana_data.merge(
           current_email: form.current_user.email,
           current_company: form.current_user.company.title,

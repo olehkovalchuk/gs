@@ -127,7 +127,8 @@ module Chat
               conversation: @model,
               message: form.message,
               file: form.file,
-              status: form.sent ? :sent : :created
+              # status: form.sent ? :sent : :created
+              status: :sent
             )
             operation.errors.each_pair{|k,v| pp k; add_error!(k,v)} unless operation.process
 
