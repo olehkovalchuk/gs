@@ -107,12 +107,12 @@ Rails.application.routes.draw do
     resources :faqs, only:[:index,:show]
 
   end
+  root 'main#landing'
 
+  scope "(:market)", market: /#{AVAILABLE_MARKETPLACES.join("|")}/ do
+    scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
-  # scope "(:market)", market: /#{AVAILABLE_MARKETPLACES.join("|")}/ do
-  #   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-
-      root 'main#landing'
+      # root 'main#landing'
 
 
       post :subscribe, to: "main#subscribe"
@@ -180,8 +180,8 @@ Rails.application.routes.draw do
       %w(logout).each do |route|
         get route, to: "sessions##{route}"
       end
-  #   end
-  # end
+    end
+  end
 
   %w( 404 422 500 503 ).each do |code|
     get code, to: "main#error", code: code
