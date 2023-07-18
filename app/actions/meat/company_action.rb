@@ -43,32 +43,32 @@ module Meat
       model.increment!("#{type}_used")
       model.reload
 
-      default_company = ::Meat::Company.find(::Setting.get("admin_company_id"))
-      default_user = default_company.managers.first
-      return true if skip_notification
+      # # default_company = ::Meat::Company.find(::Setting.get("admin_company_id"))
+      # # default_user = default_company.managers.first
+      # # return true if skip_notification
 
-      limits_left = model.send("#{type}_used") - model.send("#{type}_limit")
+      # # limits_left = model.send("#{type}_used") - model.send("#{type}_limit")
       
-      message_type = limits_left.zero? ? 'zero' : limits_left > 1 ? 'many' : 'one'
+      # # message_type = limits_left.zero? ? 'zero' : limits_left > 1 ? 'many' : 'one'
 
-      message = [I18n.t("common.notifications_messages.#{type}.heading")]
+      # # message = [I18n.t("common.notifications_messages.#{type}.heading")]
 
-      message << I18n.t("common.notifications_messages.#{type}.text.#{message_type}")
+      # # message << I18n.t("common.notifications_messages.#{type}.text.#{message_type}")
 
-      message << I18n.t("common.notifications_messages.#{type}.footer")
+      # # message << I18n.t("common.notifications_messages.#{type}.footer")
 
-      ::Chat::NotificationOperation::Create.new(
-        sender_company_id: default_company.id,
-        sender_company_user_id: default_user.id,
-        recipient_company_id: model.id,
-        recipient_company_user_id: model.managers[0].id,
-        comment: message.join('<br>'),
-        notificable_id: model.id,
-        notificable_type: model.class.name,
-        action: "pricing",
-        item_type: :pricing,
-        params: {path: 'pricing'}
-      ).process
+      # # ::Chat::NotificationOperation::Create.new(
+      # #   sender_company_id: default_company.id,
+      # #   sender_company_user_id: default_user.id,
+      # #   recipient_company_id: model.id,
+      # #   recipient_company_user_id: model.managers[0].id,
+      # #   comment: message.join('<br>'),
+      # #   notificable_id: model.id,
+      # #   notificable_type: model.class.name,
+      # #   action: "pricing",
+      # #   item_type: :pricing,
+      # #   params: {path: 'pricing'}
+      # # ).process
 
       # ::Chat::NotificationOperation::Create.new(
       #   sender_company_id: default_company.id,
