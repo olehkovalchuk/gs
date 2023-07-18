@@ -43,8 +43,9 @@
                   a.header-nav--link(href="/articles") {{translate("common.news")}}
                 li.header-nav--item(:class="{ active: 'faq' == activeTab }")
                   a.header-nav--link(href="/faq") {{translate("common.faq")}}
-            a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="show_map && !user.user_name") {{translate("common.login")}}
-            div(style="display: flex; align-items: center")
+            //- a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="show_map && !user.user_name") {{translate("common.login")}}
+            div(style="display: flex; align-items: center").buttons
+              a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="show_map && !user.user_name") {{translate("common.login")}}
               .user-menu(v-if="user.user_name")
                 router-link.user-menu--avatar(
                   :to="{name:'cabinet-menu'}"
@@ -68,7 +69,7 @@
               //-   :clearable="false",
               //-   :searchable="false"
               //- )
-              a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="!show_map && !user.user_name") {{translate("common.login")}}
+              //- a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="!show_map && !user.user_name") {{translate("common.login")}}
               router-link(
                 v-if="show_map && isNotMap"
                 :to="{name: 'map'}"
@@ -218,4 +219,7 @@ export default {
   .header-nav--item.active .header-nav--link:after {
     width: 100%;
   }
+  .buttons a:last-child {
+      margin-left: 10px;
+    }
 </style>
