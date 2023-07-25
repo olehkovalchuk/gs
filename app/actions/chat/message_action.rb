@@ -8,7 +8,7 @@ module Chat
     #   model.update(status: :created)
     # end
 
-    def after_update(model, form)
+    def after_create(model, form)
       if model.sent?
         field = model.conversation.presenter.is_sender?(model.sender) ? :recipient_new_messages : :sender_new_messages
         model.conversation.update(:has_new_messages => true, field => true )
