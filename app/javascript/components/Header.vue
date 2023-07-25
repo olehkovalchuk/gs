@@ -45,7 +45,7 @@
                   a.header-nav--link(href="/faq") {{translate("common.faq")}}
             //- a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="show_map && !user.user_name") {{translate("common.login")}}
             div(style="display: flex; align-items: center").buttons
-              a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="show_map && !user.user_name") {{translate("common.login")}}
+              a.d-none.d-xl-block.btn(@click.prevent="goToLogin" href="#" v-if="!user.user_name") {{translate("common.login")}}
               .user-menu(v-if="user.user_name")
                 router-link.user-menu--avatar(
                   :to="{name:'cabinet-menu'}"
