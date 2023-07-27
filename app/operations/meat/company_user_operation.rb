@@ -62,6 +62,7 @@ module Meat
         with_transaction do
           Thread.current[:skip_captcha] = true
           # add_error!(:already_logged_in, "Already logged in") if form.current_user
+          add_error!(:email_exist, email: form.email ) if Meat::CompanyUser.exists?(email: form.email )
 
           if @model = Meat::CompanyUser.where(email: form.email).take
             return true
