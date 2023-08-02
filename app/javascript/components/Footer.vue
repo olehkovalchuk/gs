@@ -10,7 +10,7 @@
           ul.contacts
             li.contacts--item.address 67G Chornovola avenue, Lviv, Ukraine, 79058
             li.contacts--item.phone
-              a(href="tel:+380673741103" target="_blank") +38 (067) 374 11 03
+              a(href="tel:+306971973836" target="_blank") +30 (697) 197 38 36
             li.contacts--item.mail
               a(href="mailto:info@globsupplies.com" target="_blank") info@globsupplies.com
             li.contacts--item.skype
@@ -57,7 +57,7 @@
       .mobile-external-links
         ExternalLinks
       .footer--bottom
-        p 2020 All rights reserved
+        p 2023 All rights reserved
         p Developed by:
           a(rel="nofollow" href="https://beone.software" target="_blank") BeOne Software
     WechatPopup
