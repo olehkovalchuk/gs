@@ -39,7 +39,6 @@ class ConversationsController < ApplicationController
 
   def create
     process_and_respond!(operation: Chat::ConversationOperation::AddMessage.new( with_default_params(message_params) ) ) do |operation, result|
-      ActionCable.server.broadcast "chat_channel_#{result.recipient_id}", {message: result}
       render json: { success: true, id: result.id }
     end
   end

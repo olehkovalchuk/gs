@@ -150,6 +150,8 @@ module Chat
             @model.recipient.company.increment!(:incoming_chats_count,1)
 
             ::KibanaLogger.push("send_message", operation.model.presenter.kibana_data )
+
+            ActionCable.server.broadcast "chat_channel_#{operation.model.recipient_id}", {message: operation.model}
           else
             ::KibanaLogger.push("send_message", @model.presenter.kibana_data )
           end
