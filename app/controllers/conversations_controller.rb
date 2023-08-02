@@ -21,10 +21,12 @@ class ConversationsController < ApplicationController
 
   def show
     process_and_respond!(operation: Chat::MessageOperation::CabinetList.new( with_default_params(id: params[:id]) ) ) do |operation, result|
+      conversation = Chat::ConversationSerializer::List.new( operation.model, current_user: current_user )
+      ActionCable.server.broadcast("conversation_channel_#{current_user.id}", {id: conversation.object.id})
       render json:(
         {
           success: true,
-          item: Chat::ConversationSerializer::List.new( operation.model, current_user: current_user ),
+          item: conversation,
           items: ActiveModelSerializers::SerializableResource.new(
             result,
             each_serializer: Chat::MessageSerializer::List,
@@ -37,6 +39,7 @@ class ConversationsController < ApplicationController
 
   def create
     process_and_respond!(operation: Chat::ConversationOperation::AddMessage.new( with_default_params(message_params) ) ) do |operation, result|
+      ActionCable.server.broadcast "chat_channel_#{result.recipient_id}", {message: result}
       render json: { success: true, id: result.id }
     end
   end

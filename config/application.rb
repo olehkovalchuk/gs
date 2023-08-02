@@ -56,7 +56,7 @@ module GlobalSupplies
     config.action_cable.mount_path = nil
     config.action_cable.url = "ws://localhost:3000/cable"
     config.action_cable.allowed_request_origins = [ 'http://localhost', /http:\/\/localhost.*/ ]
-    config.web_socket_server_url = "wss://localhost:3000/cable"
+    config.web_socket_server_url = "ws://localhost:3000/cable"
     config.action_controller.default_url_options = { :trailing_slash => true }
 
 

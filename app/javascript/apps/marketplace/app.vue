@@ -20,19 +20,35 @@
     channels: {
         ChatChannel: {
             connected() {
-              //console.log('I ChatChannel connected.');
+              console.log('ChatChannel connected.');
             },
             rejected() {},
             received(data) {
-              if(data.new_message){
+              if(data){
                 window.location.reload()
+              }
+            },
+            disconnected() {}
+        },
+        ConversationChannel: {
+            connected() {
+              console.log('ConversationChannel connected.');
+            },
+            rejected() {},
+            received(data) {
+              if (data.id) {
+                document.querySelectorAll(".contact-list--link").forEach(el => {
+                  if (+el.href.split('/').pop() == data.id && el.querySelector('.new-msg')) {
+                    el.querySelector('.new-msg').style.display = "none";
+                  }
+                });
               }
             },
             disconnected() {}
         },
         NotificationsChannel: {
             connected() {
-              console.log('I NotificationsChannel connected.');
+              console.log('NotificationsChannel connected.');
             },
             rejected() {},
             received(data) {
@@ -70,6 +86,7 @@
 
       this.$cable.subscribe({ channel: 'NotificationsChannel' });
       this.$cable.subscribe({ channel: 'ChatChannel' });
+      this.$cable.subscribe({ channel: 'ConversationChannel' });
       if(this.$route.meta && this.$route.meta.showLogin){
         this.showLogin()
       }

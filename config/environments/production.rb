@@ -115,6 +115,4 @@ Rails.application.configure do
 
   config.action_cable.url = "#{Rails.application.secrets[:ws_protocol].presence || 'ws'}://#{Rails.application.secrets[:app_host]}/cable" # ws:// is non-secure, wss:// is secure
   config.action_cable.allowed_request_origins = [ "#{Rails.application.secrets[:app_protocol]}://#{Rails.application.secrets[:app_host]}" ]
-
-
 end

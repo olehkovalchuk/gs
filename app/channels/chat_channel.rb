@@ -4,7 +4,8 @@ class ChatChannel < ApplicationCable::Channel
   # end
 
   def subscribed
-    stream_for current_user
+    stream_from "chat_channel_#{current_user.id}"
+    # stream_for current_user
   end
 
   def unsubscribed
