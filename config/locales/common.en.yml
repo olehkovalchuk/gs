@@ -811,4 +811,6 @@ en:
       wrong_verification: Verification code wrong or exipred
       already_delivered: Restore code already delivered, please check your email or try after 2 hours
       email_exist: "Email <b>%{email}</b> has been taken, please choose another one"
+    offer:
+      select_categoty: "Category is required. Please, select category"
       
