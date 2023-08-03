@@ -108,7 +108,7 @@ Rails.application.routes.draw do
 
   end
   root 'main#landing'
-
+  get :marketplace, to: "main#index"
   scope "(:market)", market: /#{AVAILABLE_MARKETPLACES.join("|")}/ do
     scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
@@ -134,7 +134,7 @@ Rails.application.routes.draw do
       post :feedback, to: "main#feedback"
 
       get :faq, to: "main#faq"
-      get :marketplace, to: "main#index"
+      # get :marketplace, to: "main#index"
       get "/marketplace/marketplace", to: "main#index"
 
       get :thank_you, to: "main#index"
