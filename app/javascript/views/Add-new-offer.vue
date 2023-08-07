@@ -326,7 +326,7 @@ export default {
 
         this.$validator.errors.add({ field: 'category', msg: `Category is invalid` });
 
-        // toValidate.push( this.$validator.validate('category') )
+        toValidate.push( this.$validator.validate('category') )
       }
       const results = Promise.all([...toValidate]);
       return (await results).every(isValid => isValid);

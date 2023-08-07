@@ -74,9 +74,6 @@ module Meat
           form.company_id = form.current_user.company_id
           form.company_user_id = form.current_user.id
         end
-        if form.category_id
-          errors.add(:category_id, I18n.t("errors.offer.select_categoty"))
-        end
       end
     end
 
