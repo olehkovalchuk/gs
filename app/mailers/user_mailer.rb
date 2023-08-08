@@ -28,11 +28,12 @@ class UserMailer < ApplicationMailer
   end
 
   def chat_message( user, model )
+    url = user.reset_password_token.presence ? inq_restore_password_url(token: user.reset_password_token) : "https://globsupplies.com/marketplace/cabinet/conversations/#{model.conversation.id}"
     safe_action 'chat_message', nil, false do |template|
       _placeholders( user ).merge(
         sender: model.sender_company.title,
         message: model.text,
-        chat_link: "https://globsupplies.com/marketplace/cabinet/conversations/#{model.conversation.id}"
+        chat_link: url
       ).each_pair{ |k,v| template.text = template.text.gsub!("%#{k.to_s.upcase}%",v.to_s) }
       template.title = 'You have a new message on GlobalSupplies'
 

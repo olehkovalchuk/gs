@@ -9,6 +9,8 @@ module Chat
     # end
 
     def after_create(model, form)
+      return if model.recipient.reset_password_token.presence && model.text == ::Setting.get("registration_message")
+
       if model.sent?
         field = model.conversation.presenter.is_sender?(model.sender) ? :recipient_new_messages : :sender_new_messages
         model.conversation.update(:has_new_messages => true, field => true )
