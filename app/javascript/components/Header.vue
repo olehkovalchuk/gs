@@ -29,7 +29,7 @@
                 li.header-nav--item(:class="{ active: 'marketplace' == activeTab }" v-else)
                   a.header-nav--link(href="/marketplace") {{translate("common.marketplace")}}
                 li.header-nav--item(:class="{ active: 'benefits' == activeTab }")
-                  a.header-nav--link(href="#")
+                  span.header-nav--link(href="#")
                     | {{translate("common.benefits")}}
                     span.arrow-icon
                   ul.header-nav-submenu

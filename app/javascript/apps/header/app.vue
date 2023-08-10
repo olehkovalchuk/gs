@@ -26,6 +26,8 @@
     methods: {
     },
     mounted(){
+      this.$store.dispatch('users/CheckMessages');
+
       if(gon.message){
         this.$store.dispatch('marketplace/Success',gon.message )
       }

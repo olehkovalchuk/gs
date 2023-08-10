@@ -8,6 +8,10 @@ module Chat
     end
 
     def after_create(model,form)
+      # disabled inquiry emails for all users
+      return
+      # return if model.recipient.reset_password_token.presence
+
       model.update(inquiry_email: "inquiries+#{Digest::MD5.hexdigest(model.id.to_s)}@globsupplies.com")
       if form.with_recount && !model.recipient_company.presenter.allowed_to_use?(:received_inquries)
         model.unpayed!
